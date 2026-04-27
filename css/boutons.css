@@ -1,0 +1,119 @@
+.retour{
+    width: 45px;
+    font-size: 14px;
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 8px 20px; 
+    align-items: auto;
+    justify-content: auto;
+    text-align: center;
+    margin: 30px auto 50px auto;
+}
+
+
+
+.card__bouton{
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+}
+
+/* .card__bouton-nonabsolu{
+    display: flex;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    margin: -50px -25px 100px -50px;
+    visibility: visible;
+} */
+
+.card__bouton__right{
+    right: 10px;
+}
+
+.card__bouton__left{
+    left: 10px;
+}
+
+.card__bouton__correction--top{
+    top: 0px;
+}
+
+.card__bouton:hover{
+    background-color: var(--color-hover);
+}
+
+.boutonCardG:hover{
+    background-color: var(--color-hover);
+}
+
+.boutonHero{
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: var(--color-accent);
+    justify-content: center;
+    margin: 30px 0px 20px 0px;
+    position:relative;
+}
+
+.boutonHero::after{
+    content: "Tapez F12";
+    position: absolute;
+    bottom: 120%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.boutonHero:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.boutonHero a{
+    color: white;
+    text-decoration: none;
+}
+
+.boutonHero:hover{
+    background-color: var(--color-hover);
+}
+
+.bouton__deco{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    max-width: 100px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: var(--color-accent);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 768px) { 
+
+    .card__bouton-nonabsolu{
+    visibility: hidden;
+}
+    
+}
