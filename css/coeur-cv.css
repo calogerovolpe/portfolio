@@ -106,6 +106,14 @@
     font-size: 18px;
 }
 
+.grid-coeur-cv-infosup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    padding: 20px;
+}
+
 
 /* ======================== */
 /* 2. ***** MEDIA ***** */
@@ -142,6 +150,10 @@
 .grid-formations p{
     margin: 10px;
     font-size: 16px;
+}
+
+.grid-coeur-cv-infosup{
+    display: none;
 }
 
 }
