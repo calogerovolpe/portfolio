@@ -1,0 +1,45 @@
+.tagsCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 20px;
+}
+
+.tags {
+    display: inline-flex; 
+    padding: 8px 20px; 
+    white-space: nowrap; 
+    background-color: var(--color-secondary);
+    border-radius: 50px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tags-fort{
+    display: inline-flex; 
+    padding: 8px 20px; 
+    white-space: nowrap; 
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;   
+}
+
+.tagscard__content__column{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.tags-pg{
+    background-color: var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+}
