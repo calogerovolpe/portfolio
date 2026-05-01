@@ -1,363 +1,613 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr" class="scroll-smooth">
   <head>
-    <link rel="stylesheet" href="../css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Calogero Volpe - Curriculum Vitae</title>
   </head>
-  <body>
-    <!-- =============================
-1. *** Header ***
-=============================   -->
-
-    <header>
-      <nav class="menu flex-center">
-        <a href="./index.html">
-          <div class="logo">
-            <img
-              src="../src/assets/images/logo.png"
-              alt="Logo de l'entreprise"
-            />
-          </div>
-        </a>
-      </nav>
-    </header>
-
-    <!-- =============================
-2. *** Main ***
-=============================   -->
-
-    <main>
-      <div class="retour flex-center">
-        <a href="../index.html">Retour</a>
-      </div>
-
-      <div class="flex-center margin-bottom30">
-        <button
-          class="btn-imprimer"
-          onclick="window.print()"
-          style="
-            padding: 10px 20px;
-            background-color: var(--color-accent);
-            color: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-          "
+  <body class="bg-gray-950 print:bg-white">
+    <header
+      class="engagez-moi-je-suis-un-tres-bon-element-promis mt-10 mb-16 mx-8 print:hidden"
+    >
+      <!-- Conteneur flex pour gérer le titre et le bouton hamburger -->
+      <div
+        class="flex flex-row items-center justify-between text-white md:flex-col md:justify-center"
+      >
+        <a
+          href="../../index.html"
+          class="text-2xl transition-colors hover:text-red-300"
+          >@calogerovolpe</a
         >
-          Imprimer mon CV
+
+        <!-- Bouton Menu Hamburger -->
+        <button
+          id="menu-btn"
+          class="block focus:outline-none md:hidden"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
         </button>
       </div>
 
-      <!-- =============================
-2. *** CV ***
-=============================   -->
-
-      <div class="cardA4">
-        <!-- 1. Cadre de présentation -->
-        <!-- ************************* -->
-
-        <div class="border-presentation">
-          <div class="card-presentation">
-            <!-- Toute la section haute du CV -->
-
-            <div class="content-gap1"></div>
-
-            <!-- Logo ------------ -->
-
-            <div class="content-info">
-              <img
-                class="logo-content-info"
-                src="../src/assets/images/logo.png"
-                alt=""
-              />
-
-              <div class="info-mail-tel">
-                <!-- conteneur pour facilité l'ajustement des informations -->
-
-                <!-- Mail -------------- -->
-
-                <a href="mailto:bx.volpe@gmail.com">
-                  <img
-                    src="../src/assets/images/enveloppe.png"
-                    alt="Email"
-                    class="icone"
-                  />
-                  bx.volpe@gmail.com
-                </a>
-
-                <!-- Tel Belge -------------- -->
-
-                <p>
-                  <a href="tel:+32494161997">
-                    <img
-                      src="../src/assets/images/tel2.png"
-                      alt="Tel Be"
-                      class="icone"
-                    />
-                    +32 494 16 19 97
-                  </a>
-                </p>
-
-                <!-- Tel Français -------------- -->
-
-                <p class="margin-top5">
-                  <a href="tel:+33664540423">
-                    <img
-                      src="../src/assets/images/tel1.png"
-                      alt="Tel fr"
-                      class="icone"
-                    />
-                    +33 64 54 04 23
-                  </a>
-                </p>
-
-                <!-- Github -->
-
-                <div class="github-content">
-                  <a href="https://github.com/calogerovolpe">
-                    <img
-                      style="max-width: 30px"
-                      src="../src/assets/images/github.png"
-                      alt="Github"
-                      class="icone"
-                    />
-                    @calogerovolpe
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- Fin de content-info (première colonne) -->
-
-            <!-- Photo de profil -------------- -->
-
-            <div class="content-photo">
-              <img src="../src/assets/images/portrait.webp" alt="photo" />
-            </div>
-
-            <!-- Fin de content-photo (deuxième colonne) -->
-
-            <!-- Titre de fonction -------------- -->
-
-            <div class="content-titre">
-              <div class="col-titre">
-                <p style="font-size: 24px">
-                  &lt;h1&gt;Développeur<br />
-                  Front-End |<br />
-                  UI Designer&lt;/h1&gt;
-                </p>
-
-                <!-- permis -->
-
-                <p style="margin: 0px 43px 0px 0px">
-                  <img
-                    src="../src/assets/images/auto.png"
-                    alt="permis"
-                    class="icone"
-                  />
-                  Permis B / Vehiculé
-                </p>
-
-                <!-- Google Map -->
-
-                <p style="margin-top: 5px">
-                  <a href="https://maps.app.goo.gl/MLtUQRXHmfEJtzA5A">
-                    <img
-                      src="../src/assets/images/marqueur.png"
-                      alt="Email"
-                      class="icone"
-                    />
-                    7620 Guignies, Brunehaut
-                  </a>
-                </p>
-              </div>
-
-              <!-- Fin de content-titre (dernière colonne) -->
-            </div>
-            <div class="content-gap2">
-              <!-- Le petit bouton + qui décore -->
-
-              <div class="card__bouton-nonabsolu">
-                <a class="card__bouton-nonabsolu" href="./projetsGraphique.html"
-                  >+</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Fin de Cadre de présentation -->
-        <!-- **************************** -->
-
-        <!-- 2. Cadre de Compétences -->
-        <!-- *********************** -->
-
-        <div class="border-coeur-cv">
-          <div class="grid-coeur-cv">
-            <!-- Grid de Compétences -->
-
-            <div class="grid-coeur-cv-competences">
-              <h2>Compétences</h2>
-              <div class="card-tags-competences">
-                <div class="tags-competences">Figma</div>
-                <div class="tags-competences">HTML</div>
-                <div class="tags-competences">CSS</div>
-                <div class="tags-competences">TailWind</div>
-                <div class="tags-competences">SASS</div>
-                <div class="tags-competences">JavaScript</div>
-                <div class="tags-competences">TypeScript</div>
-                <div class="tags-competences">Divi</div>
-                <div class="tags-competences">Wordpress</div>
-                <div class="tags-competences">Elementor Pro</div>
-                <div class="tags-competences">Illustrator</div>
-                <div class="tags-competences">Word</div>
-                <div class="tags-competences">Photoshop</div>
-                <div class="tags-competences">Excel</div>
-              </div>
-            </div>
-
-            <!-- Grid de Langues -->
-
-            <div class="grid-coeur-cv-langues">
-              <h2>Langues</h2>
-              <div class="case-langues">
-                <div class="grid-langues">
-                  <p>Français</p>
-                  <p>Néerlandais</p>
-                  <p>Anglais</p>
-                  <p>Italien</p>
-                </div>
-
-                <div>
-                  <p>SSS</p>
-                  <p>B2</p>
-                  <p>B1</p>
-                  <p>C1</p>
-                </div>
-              </div>
-            </div>
-            <!-- Fin de la class grid-coeur-cv-langues -->
-
-            <!-- Grid d'infos supplémentaires -->
-
-            <div
-              class="grid-coeur-cv-infosup"
-              style="background-color: var(--color-primary)"
+      <!-- Menu de navigation -->
+      <nav
+        id="menu"
+        class="hidden mt-4 text-[12px] text-white transition-all duration-300 md:block"
+      >
+        <ul
+          class="flex flex-col items-center justify-center gap-5 mt-6 md:flex-row md:mt-0"
+        >
+          <li
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 border border-gray-700 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+          >
+            <span
+              class="py-2 px-4 w-full text-center bg-gray-700 rounded-full md:py-1 md:px-2 md:w-auto"
+              >Mes réalisations</span
             >
-              <img src="../src/assets/images/qrcode.png" alt="" />
-              <p style="text-align: center; font-weight: bold; font-size: 14px">
-                Mon porfolio en ligne
-              </p>
-            </div>
-
-            <!-- Fin Grid d'infos supplémentaires -->
-
-            <!-- Grid d'Expériences -->
-
-            <div class="grid-coeur-cv-experiences">
-              <h2>&lt;h2&gt;Expériences&lt;/h2&gt;</h2>
-
-              <p>
-                &lt;h3&gt;<strong>Freelance à Paris</strong>&lt;/h3&gt;
-                <span class="text-color-inline">&lt;!-- 2021 - 2026 --&gt;</span
-                ><br />
-                &nbsp &nbsp &lt;ul&gt;<br />
-                &nbsp &nbsp &nbsp &nbsp &lt;li&gt;Création d'identités visuelles
-                complètes&lt;/li&gt;<br />
-                &nbsp &nbsp &nbsp &nbsp &lt;li&gt;Conception de chartes
-                graphiques sur mesure&lt;/li&gt;<br />
-                &nbsp &nbsp &nbsp &nbsp &lt;li&gt;Prototypage et maquettage
-                UI/UX sous Figma&lt;/li&gt;<br />
-                &nbsp &nbsp &nbsp &nbsp &lt;li&gt;Développement
-                Front-end&lt;/li&gt;<br />
-                &nbsp &nbsp &nbsp &nbsp
-                <span class="text-color-inline"
-                  >&lt;!-- J’ai commencé a me former en Front-end en 2024. Et
-                  j’ai intégré cette connaissance directement dans mon
-                  entreprise --&gt;</span
-                ><br />
-                &nbsp &nbsp &lt;/ul&gt;<br />
-
-                &lt;h3&gt;<strong>Chargé commercial à Ville de Montreuil</strong
-                >&lt;/h3&gt;
-                <span class="text-color-inline">&lt;!-- 2019 - 2021 --&gt;</span
-                ><br />
-                &nbsp &nbsp &lt;ul&gt;<br />
-                &nbsp &nbsp &nbsp &nbsp &lt;li&gt;Gestion de relation entre
-                commerçant de la ville&lt;/li&gt;<br />
-                &nbsp &nbsp &nbsp &nbsp &lt;li&gt;Promouvoir la ville par des
-                évenements/marchés&lt;/li&gt;<br />
-                &nbsp &nbsp &nbsp &nbsp &lt;li&gt;Côntrole des réglementations
-                locales&lt;/li&gt;<br />
-                &nbsp &nbsp &lt;/ul&gt;<br />
-
-                &lt;h3&gt;<strong>Manager en HORECA</strong>&lt;/h3&gt;
-                <span class="text-color-inline">&lt;!-- 2010 - 2019 --&gt;</span
-                ><br />
-                &lt;p&gt;Carrière dans la cuisine traditionnelle et collective,
-                évolution de commis à responsable d’unité. Gestion de grande
-                équipe, de la logistique et de la stratégie
-                opérationnelle.&lt;/p&gt;
-                <!-- </code></pre> -->
-              </p>
-            </div>
-
-            <!-- Fin du grid Éxpériences -->
-
-            <!-- Grid de Formations -->
-
-            <div
-              class="grid-coeur-cv-formations"
-              style="background-color: var(--color-primary)"
+            <a
+              href="./projetsGraphique.html"
+              class="block py-2 px-4 w-full text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2 md:w-auto"
+              >Graphique</a
             >
-              <div class="titre-formations">
-                <h2>Formations</h2>
-              </div>
+            <a
+              href="./projetsWeb.html"
+              class="block py-2 px-4 w-full text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2 md:w-auto"
+              >Web</a
+            >
+          </li>
+          <li
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 border border-gray-700 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+          >
+            <a
+              href="./cv.html"
+              class="block py-3 px-4 text-center bg-gray-600 rounded-full transition-colors cursor-pointer hover:bg-gray-500 md:py-1 md:px-2"
+              >Curriculum Vitae</a
+            >
+            <a
+              href="./contact.html"
+              class="block py-3 px-4 text-center bg-red-400 rounded-full transition-colors cursor-pointer hover:bg-red-500 md:py-1 md:px-2"
+              >@Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-              <div class="grid-formations">
-                <div class="dateST">
-                  <p>2024 - 2026</p>
-                  <p>STUDI</p>
-                </div>
-                <div class="formST">
-                  <p>Communication Web et Media | E-Learling</p>
-                </div>
-                <div class="dateBR">
-                  <p>2015 - 2016</p>
-                  <p>BRUXELLES</p>
-                </div>
-                <div class="formBR">
-                  <p>
-                    Faculté de philosophie à l’université de Saint Louis à
-                    Bruxelles
-                  </p>
-                </div>
-                <div class="dateSL">
-                  <p>2007 - 2010</p>
-                  <p>SAINT-LUC</p>
-                </div>
-                <div class="formSL">
-                  <p>Dessins techniques & créativité artistique - Bachelor</p>
-                </div>
-              </div>
-            </div>
-            <!-- Fin grid formations -->
-          </div>
-          <!-- Fin grid coeur-cv -->
+    <main
+      class="flex flex-col gap-8 m-3 mb-20 md:mx-10 lg:mx-auto lg:max-w-5xl print:max-w-[21cm] print:m-0"
+    >
+      <!-- Barre d'action -->
+      <div
+        class="flex flex-col items-center justify-between gap-4 p-6 bg-gray-800 border border-gray-700 md:flex-row rounded-4xl print:hidden"
+      >
+        <h2 class="text-2xl text-white md:text-3xl">Curriculum Vitae</h2>
+        <div class="flex gap-4">
+          <a
+            href="../../index.html"
+            class="px-5 py-2 text-white transition-colors bg-gray-700 rounded-full hover:bg-gray-600"
+          >
+            &larr; Retour
+          </a>
+          <button
+            onclick="window.print()"
+            class="px-5 py-2 font-bold text-white transition-colors bg-red-400 rounded-full hover:bg-red-500"
+          >
+            Imprimer
+          </button>
         </div>
-        <!-- fin border coeur-cv -->
       </div>
-      <!-- Fin de CardA4 -->
 
-      <footer>
-        <div class="footer__content">
-          <p>© 2026 Calogero Volpe. Tous droits réservés.</p>
-          <p>bx.volpe@gmail.com</p>
-          <p>FR : +33 6 64 54 04 23 | BE : +32 494 16 19 97</p>
+      <!-- =============================
+           LA FEUILLE A4 (Le CV)
+      ============================= -->
+      <div
+        class="bg-gray-800 border border-gray-700 rounded-4xl shadow-2xl p-8 md:p-12 print:bg-white print:border-none print:shadow-none print:rounded-none print:p-8 print:text-black w-full [font-family:var(--font-secondary)]"
+      >
+        <!-- En-tête du CV (Contact, Photo, Titre) -->
+        <div
+          class="flex flex-col md:flex-row print:flex-row justify-between items-stretch gap-8 print:gap-6 border-b border-gray-700 pb-8 print:pb-6 print:border-gray-300"
+        >
+          <!-- Colonne de gauche : Contact -->
+          <div
+            class="flex flex-col justify-center gap-4 print:gap-2 text-gray-300 text-base print:text-xs print:text-black md:w-1/3 print:w-1/3 print:text-left"
+          >
+            <a
+              id="cv-mail-link"
+              href="#"
+              class="flex items-center gap-2 hover:text-red-300 transition-colors"
+            >
+              <img
+                src="../assets/images/enveloppe.png"
+                class="w-4 h-4 invert print:invert-0"
+              />
+              <span id="cv-mail-text">Chargement...</span>
+            </a>
+            <a
+              href="#"
+              class="protected-tel-be flex items-center gap-2 hover:text-red-300 transition-colors"
+            >
+              <img
+                src="../assets/images/tel2.png"
+                class="w-4 h-4 invert print:invert-0"
+              />
+              <span class="tel-text">Chargement...</span>
+            </a>
+            <a
+              href="#"
+              class="protected-tel-fr flex items-center gap-2 hover:text-red-300 transition-colors"
+            >
+              <img
+                src="../assets/images/tel1.png"
+                class="w-4 h-4 invert print:invert-0"
+              />
+              <span class="tel-text">Chargement...</span>
+            </a>
+            <a
+              href="https://github.com/calogerovolpe"
+              class="flex items-center gap-2 hover:text-red-300 transition-colors"
+            >
+              <img
+                src="../assets/images/github.png"
+                class="w-5 h-5 -ml-0.5 invert print:invert-0"
+              />
+              @calogerovolpe
+            </a>
+          </div>
+
+          <!-- Colonne centrale : Photo -->
+          <div class="shrink-0 self-center">
+            <img
+              src="../assets/images/portrait.webp"
+              alt="Calogero Volpe"
+              class="w-40 h-40 print:w-28 print:h-28 object-cover rounded-full border-4 border-gray-700 print:border-gray-200"
+            />
+          </div>
+
+          <!-- Colonne de droite : Titre -->
+          <div
+            class="flex flex-col justify-center gap-3 print:gap-1 text-center md:text-right print:text-right text-gray-300 print:text-black md:w-1/3 print:w-1/3"
+          >
+            <h1
+              class="text-3xl md:text-4xl print:text-2xl text-white font-bold print:text-black leading-tight"
+            >
+              Développeur<br />
+              <span class="text-red-400 print:text-gray-800">Front-End</span
+              ><br />
+              UI Designer
+            </h1>
+            <p
+              class="flex items-center justify-center md:justify-end gap-2 mt-2"
+            >
+              <img
+                src="../assets/images/auto.png"
+                class="w-4 h-4 invert print:invert-0"
+              />
+              Permis B / Véhiculé
+            </p>
+            <a
+              href="https://maps.app.goo.gl/MLtUQRXHmfEJtzA5A"
+              target="_blank"
+              class="flex items-center justify-center md:justify-end gap-2 hover:text-red-300 transition-colors"
+            >
+              <img
+                src="../assets/images/marqueur.png"
+                class="w-4 h-4 invert print:invert-0"
+              />
+              7620 Guignies, Brunehaut
+            </a>
+          </div>
         </div>
-      </footer>
+
+        <!-- Section centrale : Compétences et Langues -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-[2fr_1fr] print:grid-cols-[2fr_1fr] gap-4 md:gap-8 print:gap-6 py-8 print:py-6 border-b border-gray-700 print:border-gray-300"
+        >
+          <!-- Compétences -->
+          <div class="flex flex-col gap-4 print:gap-4">
+            <h2
+              class="text-2xl print:text-xl text-white font-bold print:text-black"
+            >
+              Compétences
+            </h2>
+            <div class="flex flex-wrap gap-2 print:gap-1.5">
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >Figma</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >HTML</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >CSS</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >Tailwind</span
+              >
+              <!-- <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >SASS</span
+              > -->
+              <!-- <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >JavaScript</span
+              > -->
+              <!-- <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >TypeScript</span
+              > -->
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >WordPress</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >Photoshop</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >Illustrator</span
+              >
+            </div>
+          </div>
+
+          <!-- Langues -->
+          <div class="flex flex-col gap-6 print:gap-4">
+            <h2
+              class="text-2xl print:text-xl text-white font-bold print:text-black"
+            >
+              Langues
+            </h2>
+            <div
+              class="grid grid-cols-[auto_auto] justify-start gap-x-4 md:gap-x-6 gap-y-3 print:gap-y-1 text-gray-300 text-base print:text-[13px] print:text-black bg-gray-700/40 border border-gray-600 rounded-2xl p-4 md:p-5 print:bg-transparent print:border-none print:p-0 self-start w-full"
+            >
+              <div>Français</div>
+              <div class="font-bold text-white print:text-black -ml-3 md:ml-0">
+                Natif
+              </div>
+              <div>Néerlandais</div>
+              <div class="font-bold text-red-400 print:text-gray-600">B2</div>
+              <div>Anglais</div>
+              <div class="font-bold text-red-400 print:text-gray-600">B1</div>
+              <div>Italien</div>
+              <div class="font-bold text-red-400 print:text-gray-600">C1</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Expériences -->
+        <div
+          class="py-8 print:py-6 border-b border-gray-700 print:border-gray-300"
+        >
+          <h2
+            class="text-2xl print:text-xl text-white font-bold mb-6 print:mb-4 print:text-black"
+          >
+            Expériences
+          </h2>
+
+          <div
+            class="flex flex-col gap-6 print:gap-4 text-base print:text-sm print:leading-relaxed text-gray-300 print:text-black"
+          >
+            <!-- Freelance -->
+            <div>
+              <h3
+                class="text-lg print:text-base text-white print:text-black font-bold"
+              >
+                Freelance à Paris
+                <span class="text-red-400 print:text-gray-600 font-normal ml-2"
+                  >2021 - 2026</span
+                >
+              </h3>
+              <ul class="pl-5 mt-2 list-disc marker:text-red-400">
+                <li>Création d'identités visuelles complètes</li>
+                <li>Conception de chartes graphiques sur mesure</li>
+                <li>Prototypage et maquettage UI/UX sous Figma</li>
+                <li>
+                  <span class="text-red-300 print:text-black font-semibold"
+                    >Développement Front-end</span
+                  >
+                  (Formation initiée en 2024 et appliquée aux projets clients)
+                </li>
+              </ul>
+            </div>
+
+            <!-- Chargé commercial -->
+            <div>
+              <h3
+                class="text-lg print:text-base text-white print:text-black font-bold"
+              >
+                Chargé commercial à Ville de Montreuil
+                <span class="text-red-400 print:text-gray-600 font-normal ml-2"
+                  >2019 - 2021</span
+                >
+              </h3>
+              <ul class="pl-5 mt-2 list-disc marker:text-red-400">
+                <li>Gestion de relation entre commerçants de la ville</li>
+                <li>Promouvoir la ville par des événements et marchés</li>
+                <li>Contrôle des réglementations locales</li>
+              </ul>
+            </div>
+
+            <!-- Manager HORECA -->
+            <div>
+              <h3
+                class="text-lg print:text-base text-white print:text-black font-bold"
+              >
+                Manager en HORECA
+                <span class="text-red-400 print:text-gray-600 font-normal ml-2"
+                  >2010 - 2019</span
+                >
+              </h3>
+              <p class="mt-2 text-justify">
+                Carrière dans la cuisine traditionnelle et collective, évolution
+                de commis à responsable d’unité. Gestion de grandes équipes, de
+                la logistique et de la stratégie opérationnelle.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Formations -->
+        <div class="py-8 print:py-6">
+          <h2
+            class="text-2xl print:text-xl text-white font-bold mb-6 print:mb-4 print:text-black"
+          >
+            Formations
+          </h2>
+
+          <div
+            class="flex flex-col gap-4 print:gap-3 text-base print:text-sm text-gray-300 print:text-black"
+          >
+            <div
+              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-4 items-baseline"
+            >
+              <div class="text-red-400 font-bold print:text-gray-600">
+                2024 - 2026<br />STUDI
+              </div>
+              <p
+                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0"
+              >
+                Communication Web et Media | E-Learning
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-4 items-baseline"
+            >
+              <div class="text-red-400 font-bold print:text-gray-600">
+                2015 - 2016<br />BRUXELLES
+              </div>
+              <p
+                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0"
+              >
+                Faculté de philosophie à l’université de Saint Louis à Bruxelles
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-4 items-baseline"
+            >
+              <div class="text-red-400 font-bold print:text-gray-600">
+                2007 - 2010<br />SAINT-LUC
+              </div>
+              <p
+                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0"
+              >
+                Dessins techniques & créativité artistique - Bachelor
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- QR Code -->
+        <div
+          class="mt-6 print:mt-4 flex items-center justify-start gap-6 border-t border-gray-700 print:border-gray-300 pt-6 print:pt-4"
+        >
+          <img
+            src="../assets/images/qrcode.png"
+            alt="QR Code"
+            class="w-24 h-24 print:w-20 print:h-20 rounded-xl bg-white p-2 border border-gray-700 print:border-gray-300 shadow-lg print:shadow-none"
+          />
+          <p
+            class="text-lg print:text-base text-gray-300 print:text-black font-bold leading-snug"
+          >
+            Scannez le QR Code<br />
+            <span class="text-red-400 print:text-gray-600 font-normal"
+              >pour voir mon portfolio en ligne</span
+            >
+          </p>
+        </div>
+      </div>
     </main>
+
+    <footer
+      class="flex flex-col items-center justify-center m-8 mt-20 mb-10 text-[12px] text-white print:hidden"
+    >
+      <nav>
+        <ul
+          class="flex flex-col items-center justify-center gap-3 p-4 w-full max-w-sm bg-gray-800 border border-gray-700 rounded-3xl md:flex-row md:gap-1 md:p-1.5 md:w-auto md:max-w-none md:rounded-full"
+        >
+          <!-- Logo -->
+          <li
+            class="w-full pb-2 mb-1 text-center border-b border-gray-700 md:w-auto md:pb-0 md:mb-0 md:border-none md:pr-3"
+          >
+            <a
+              href="../../index.html"
+              class="text-lg transition-colors hover:text-red-300 md:px-2"
+              >@calogerovolpe</a
+            >
+          </li>
+
+          <!-- Liens -->
+          <li class="w-full md:w-auto">
+            <a
+              href="./contact.html"
+              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              >Me contacter</a
+            >
+          </li>
+          <li class="w-full md:w-auto">
+            <a
+              href="https://github.com/calogerovolpe"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              >GitHub</a
+            >
+          </li>
+
+          <!-- Séparateur Desktop -->
+          <li class="hidden px-1 text-gray-600 md:block">|</li>
+
+          <!-- Téléphones -->
+          <li class="w-full md:w-auto">
+            <a
+              href="#"
+              data-prefix="FR : "
+              class="protected-tel-fr block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              ><span class="tel-text">Chargement...</span></a
+            >
+          </li>
+          <li class="w-full md:w-auto">
+            <a
+              href="#"
+              data-prefix="BE : "
+              class="protected-tel-be block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              ><span class="tel-text">Chargement...</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="flex flex-col items-center gap-4 mt-8 text-gray-500 md:flex-row"
+      >
+        <p>© 2026 Calogero Volpe. Tous droits réservés.</p>
+        <span class="hidden md:inline">•</span>
+        <a href="#" class="transition-colors hover:text-white"
+          >Retour en haut ↑</a
+        >
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", !isExpanded);
+      });
+
+      // Protection anti-spam de l'adresse email
+      const mUser = ["b", "x", ".", "v", "o", "l", "p", "e"].join("");
+      const mDom = ["g", "m", "a", "i", "l", ".", "c", "o", "m"].join("");
+      const mailLink = document.getElementById("cv-mail-link");
+      const mailText = document.getElementById("cv-mail-text");
+
+      if (mailLink && mailText) {
+        const emailAddress = mUser + "@" + mDom;
+        mailLink.setAttribute("href", "mail" + "to:" + emailAddress);
+        mailText.textContent = emailAddress;
+      }
+
+      // Protection anti-spam des numéros de téléphone
+      const beNum = [
+        "+",
+        "3",
+        "2",
+        "4",
+        "9",
+        "4",
+        "1",
+        "6",
+        "1",
+        "9",
+        "9",
+        "7",
+      ].join("");
+      const beDisp = [
+        "+",
+        "3",
+        "2",
+        " ",
+        "4",
+        "9",
+        "4",
+        " ",
+        "1",
+        "6",
+        " ",
+        "1",
+        "9",
+        " ",
+        "9",
+        "7",
+      ].join("");
+      document.querySelectorAll(".protected-tel-be").forEach((link) => {
+        link.setAttribute("href", "te" + "l:" + beNum);
+        const textNode = link.querySelector(".tel-text");
+        if (textNode)
+          textNode.textContent = link.hasAttribute("data-prefix")
+            ? link.getAttribute("data-prefix") + beDisp
+            : beDisp;
+      });
+
+      const frNum = [
+        "+",
+        "3",
+        "3",
+        "6",
+        "6",
+        "4",
+        "5",
+        "4",
+        "0",
+        "4",
+        "2",
+        "3",
+      ].join("");
+      const frDisp = [
+        "+",
+        "3",
+        "3",
+        " ",
+        "6",
+        " ",
+        "6",
+        "4",
+        " ",
+        "5",
+        "4",
+        " ",
+        "0",
+        "4",
+        " ",
+        "2",
+        "3",
+      ].join("");
+      document.querySelectorAll(".protected-tel-fr").forEach((link) => {
+        link.setAttribute("href", "te" + "l:" + frNum);
+        const textNode = link.querySelector(".tel-text");
+        if (textNode)
+          textNode.textContent = link.hasAttribute("data-prefix")
+            ? link.getAttribute("data-prefix") + frDisp
+            : frDisp;
+      });
+    </script>
   </body>
 </html>

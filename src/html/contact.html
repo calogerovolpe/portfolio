@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Calogero Volpe - Contact</title>
+  </head>
+  <body class="bg-gray-950 flex flex-col min-h-screen">
+    <header
+      class="engagez-moi-je-suis-un-tres-bon-element-promis mt-10 mb-16 mx-8"
+    >
+      <!-- Conteneur flex pour gérer le titre et le bouton hamburger -->
+      <div
+        class="flex flex-row items-center justify-between text-white md:flex-col md:justify-center"
+      >
+        <a
+          href="../../index.html"
+          class="text-2xl transition-colors hover:text-red-300"
+          >@calogerovolpe</a
+        >
+
+        <!-- Bouton Menu Hamburger -->
+        <button
+          id="menu-btn"
+          class="block focus:outline-none md:hidden"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu de navigation -->
+      <nav
+        id="menu"
+        class="hidden mt-4 text-[12px] text-white transition-all duration-300 md:block"
+      >
+        <ul
+          class="flex flex-col items-center justify-center gap-5 mt-6 md:flex-row md:mt-0"
+        >
+          <li
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 border border-gray-700 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+          >
+            <span
+              class="py-2 px-4 w-full text-center bg-gray-700 rounded-full md:py-1 md:px-2 md:w-auto"
+              >Mes réalisations</span
+            >
+            <a
+              href="./projetsGraphique.html"
+              class="block py-2 px-4 w-full text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2 md:w-auto"
+              >Graphique</a
+            >
+            <a
+              href="./projetsWeb.html"
+              class="block py-2 px-4 w-full text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2 md:w-auto"
+              >Web</a
+            >
+          </li>
+          <li
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 border border-gray-700 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+          >
+            <a
+              href="./cv.html"
+              class="block py-3 px-4 text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2"
+              >Curriculum Vitae</a
+            >
+            <!-- État actif du bouton Contact (rouge plus foncé) -->
+            <a
+              href="./contact.html"
+              class="block py-3 px-4 text-center bg-red-500 rounded-full transition-colors cursor-pointer hover:bg-red-600 md:py-1 md:px-2 font-bold"
+              >@Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main
+      class="flex flex-col flex-grow gap-8 m-3 mb-10 md:mx-10 lg:mx-40 max-w-6xl lg:mx-auto w-full self-center [font-family:var(--font-secondary)]"
+    >
+      <!-- En-tête de la page -->
+      <div
+        class="flex flex-col items-center justify-between gap-4 p-6 bg-gray-800 border border-gray-700 md:flex-row rounded-4xl mx-3 md:mx-0"
+      >
+        <h2 class="text-2xl text-white md:text-3xl">Me contacter</h2>
+        <a
+          href="../../index.html"
+          class="px-5 py-2 text-white transition-colors bg-gray-700 rounded-full hover:bg-gray-600"
+        >
+          &larr; Retour
+        </a>
+      </div>
+
+      <!-- Contenu Contact (Grille 2 colonnes) -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 mx-3 md:mx-0">
+        <!-- Colonne Gauche : Formulaire -->
+        <section
+          class="flex flex-col gap-6 p-8 bg-gray-800 border border-gray-700 rounded-4xl shadow-xl h-fit"
+        >
+          <div class="flex flex-col gap-2">
+            <h3 class="text-2xl text-white font-bold">
+              Envoyez-moi un message
+            </h3>
+            <p class="text-gray-300 text-sm">
+              Un projet en tête ou une opportunité de collaboration ? Remplissez
+              ce formulaire et je vous répondrai dans les plus brefs délais.
+            </p>
+          </div>
+
+          <!-- Formulaire Web3Forms -->
+          <form
+            id="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="flex flex-col gap-5 mt-2"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="9abe37d0-3cbd-47f7-ac8d-6eb4c9a54a75"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
+            <div class="flex flex-col gap-2">
+              <label for="name" class="text-sm font-semibold text-gray-300"
+                >Votre nom</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="p-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all placeholder-gray-600"
+                placeholder="Ex: Jean Dupont"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-sm font-semibold text-gray-300"
+                >Votre adresse e-mail</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="p-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all placeholder-gray-600"
+                placeholder="Ex: jean.dupont@email.com"
+              />
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="message" class="text-sm font-semibold text-gray-300"
+                >Votre message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+                class="p-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all resize-none placeholder-gray-600"
+                placeholder="Comment puis-je vous aider ?"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="mt-2 px-8 py-3 bg-red-400 text-white font-bold rounded-full hover:bg-red-500 transition-colors self-start md:self-end w-full md:w-auto"
+            >
+              Envoyer le message
+            </button>
+          </form>
+        </section>
+
+        <!-- Colonne Droite : Infos & Carte -->
+        <div class="flex flex-col gap-8">
+          <!-- Disponibilité -->
+          <section
+            class="flex flex-col gap-4 p-8 bg-gray-800 border border-gray-700 rounded-4xl shadow-xl"
+          >
+            <h3 class="text-xl text-white font-bold">Mon statut actuel</h3>
+            <ul class="flex flex-col gap-4 text-sm text-gray-300 mt-2">
+              <li class="flex items-center gap-3">
+                <div class="relative flex items-center justify-center w-3 h-3">
+                  <span
+                    class="absolute inline-flex w-full h-full bg-green-400 rounded-full opacity-75 animate-ping"
+                  ></span>
+                  <span
+                    class="relative inline-flex w-2 h-2 bg-green-500 rounded-full"
+                  ></span>
+                </div>
+                <span class="font-medium text-white"
+                  >Ouvert aux opportunités</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-2 h-2 bg-gray-500 rounded-full shrink-0 ml-0.5"
+                ></div>
+                <span
+                  >Recherche une équipe dynamique pour consolider mes
+                  acquis.</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-2 h-2 bg-gray-500 rounded-full shrink-0 ml-0.5"
+                ></div>
+                <span
+                  >Mobilité : Télétravail & Hybride (Belgique / Frontière
+                  FR)</span
+                >
+              </li>
+            </ul>
+          </section>
+
+          <!-- Carte Google Maps -->
+          <section
+            class="flex flex-col gap-4 p-8 bg-gray-800 border border-gray-700 rounded-4xl shadow-xl h-full"
+          >
+            <div class="flex flex-col gap-1">
+              <h3 class="text-xl text-white font-bold">Localisation</h3>
+              <p class="text-sm text-gray-400">
+                Guignies (7620 Brunehaut), Belgique
+              </p>
+            </div>
+
+            <!-- Iframe de la carte encastrée -->
+            <div
+              class="w-full h-64 mt-2 overflow-hidden border border-gray-700 rounded-2xl bg-gray-900"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40733.91617260592!2d3.332353139049969!3d50.5361730030567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2e90f2b3c2243%3A0x8ec8c4e4d5a9b9a!2s7620%20Guignies%2C%20Brunehaut%2C%20Belgique!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="opacity-90 hover:opacity-100 transition-opacity duration-300"
+              ></iframe>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Tu peux simplement copier-coller ici la balise <footer> complète et la balise <script> depuis ton fichier projetsWeb.html ou cv.html ! -->
+
+    <script>
+      const form = document.getElementById("contact-form");
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Envoi en cours...";
+        submitBtn.disabled = true;
+        submitBtn.classList.add("opacity-50", "cursor-not-allowed");
+
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            alert("Succès ! Votre message a bien été envoyé.");
+            form.reset();
+          } else {
+            alert("Erreur : " + data.message);
+          }
+        } catch (error) {
+          alert("Un problème est survenu. Veuillez réessayer.");
+        } finally {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.classList.remove("opacity-50", "cursor-not-allowed");
+        }
+      });
+    </script>
+  </body>
+</html>

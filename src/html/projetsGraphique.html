@@ -54,7 +54,8 @@
           class="flex flex-col items-center justify-center gap-5 mt-6 md:flex-row md:mt-0"
         >
           <li
-            class="flex flex-col gap-3 p-3 w-full bg-gray-800 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 border border-gray-700 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 border border-gray-700 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
           >
             <span
               class="py-2 px-4 w-full text-center bg-gray-700 rounded-full md:py-1 md:px-2 md:w-auto"
@@ -80,7 +81,7 @@
               >Curriculum Vitae</a
             >
             <a
-              href="./contact"
+              href="./contact.html"
               class="block py-3 px-4 text-center bg-red-400 rounded-full transition-colors cursor-pointer hover:bg-red-500 md:py-1 md:px-2"
               >@Contact</a
             >
@@ -92,7 +93,7 @@
     <main class="flex flex-col gap-8 m-3 mb-20 md:mx-10 lg:mx-40">
       <!-- En-tête de la page de projets -->
       <div
-        class="flex flex-col items-center justify-between gap-4 p-6 bg-gray-800 md:flex-row rounded-4xl"
+        class="flex flex-col items-center justify-between gap-4 p-6 bg-gray-800 border border-gray-700 md:flex-row rounded-4xl"
       >
         <h2 class="text-2xl text-white md:text-4xl">Projets {Graphiques}</h2>
         <a
@@ -109,7 +110,9 @@
       >
         <!-- Carte : L'îlot câlins -->
         <section
-          class="flex flex-col overflow-hidden transition-all duration-300 bg-gray-800 rounded-4xl hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/10"
+          class="flex flex-col overflow-hidden transition-all duration-300 bg-gray-800 border border-gray-700 rounded-4xl hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/10"
+          class="flex flex-col overflow-hidden transition-all duration-300 bg-gray-800 border border-gray-700 rounded-4xl hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/10"
+          class="flex flex-col overflow-hidden transition-all duration-300 bg-gray-800 border border-gray-700 rounded-4xl hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/10"
         >
           <a
             href="./projetGraphiqueDos/lilotCalin.html"
@@ -263,7 +266,7 @@
     >
       <nav>
         <ul
-          class="flex flex-col items-center justify-center gap-3 p-4 w-full max-w-sm bg-gray-800 rounded-3xl md:flex-row md:gap-1 md:p-1.5 md:w-auto md:max-w-none md:rounded-full"
+          class="flex flex-col items-center justify-center gap-3 p-4 w-full max-w-sm bg-gray-800 border border-gray-700 rounded-3xl md:flex-row md:gap-1 md:p-1.5 md:w-auto md:max-w-none md:rounded-full"
         >
           <!-- Logo -->
           <li
@@ -279,9 +282,9 @@
           <!-- Liens -->
           <li class="w-full md:w-auto">
             <a
-              href="mailto:bx.volpe@gmail.com"
+              href="./contact.html"
               class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
-              >Email</a
+              >Me contacter</a
             >
           </li>
           <li class="w-full md:w-auto">
@@ -300,16 +303,18 @@
           <!-- Téléphones -->
           <li class="w-full md:w-auto">
             <a
-              href="tel:+33664540423"
-              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
-              >FR : +33 6 64 54 04 23</a
+              href="#"
+              data-prefix="FR : "
+              class="protected-tel-fr block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              ><span class="tel-text">Chargement...</span></a
             >
           </li>
           <li class="w-full md:w-auto">
             <a
-              href="tel:+32494161997"
-              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
-              >BE : +32 494 16 19 97</a
+              href="#"
+              data-prefix="BE : "
+              class="protected-tel-be block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              ><span class="tel-text">Chargement...</span></a
             >
           </li>
         </ul>
@@ -332,6 +337,89 @@
         menu.classList.toggle("hidden");
         const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
         menuBtn.setAttribute("aria-expanded", !isExpanded);
+      });
+
+      const beNum = [
+        "+",
+        "3",
+        "2",
+        "4",
+        "9",
+        "4",
+        "1",
+        "6",
+        "1",
+        "9",
+        "9",
+        "7",
+      ].join("");
+      const beDisp = [
+        "+",
+        "3",
+        "2",
+        " ",
+        "4",
+        "9",
+        "4",
+        " ",
+        "1",
+        "6",
+        " ",
+        "1",
+        "9",
+        " ",
+        "9",
+        "7",
+      ].join("");
+      document.querySelectorAll(".protected-tel-be").forEach((link) => {
+        link.setAttribute("href", "te" + "l:" + beNum);
+        const textNode = link.querySelector(".tel-text");
+        if (textNode)
+          textNode.textContent = link.hasAttribute("data-prefix")
+            ? link.getAttribute("data-prefix") + beDisp
+            : beDisp;
+      });
+
+      const frNum = [
+        "+",
+        "3",
+        "3",
+        "6",
+        "6",
+        "4",
+        "5",
+        "4",
+        "0",
+        "4",
+        "2",
+        "3",
+      ].join("");
+      const frDisp = [
+        "+",
+        "3",
+        "3",
+        " ",
+        "6",
+        " ",
+        "6",
+        "4",
+        " ",
+        "5",
+        "4",
+        " ",
+        "0",
+        "4",
+        " ",
+        "2",
+        "3",
+      ].join("");
+      document.querySelectorAll(".protected-tel-fr").forEach((link) => {
+        link.setAttribute("href", "te" + "l:" + frNum);
+        const textNode = link.querySelector(".tel-text");
+        if (textNode)
+          textNode.textContent = link.hasAttribute("data-prefix")
+            ? link.getAttribute("data-prefix") + frDisp
+            : frDisp;
       });
     </script>
   </body>

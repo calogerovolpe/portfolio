@@ -10,35 +10,37 @@ Plutôt que de commencer directement avec des outils complexes, j'ai choisi de b
 
 ### Roadmap technique
 
-- **Phase 1 (Statut actuel) : 100% Vanilla.** Architecture HTML5 sémantique et CSS3 modulaire. L'objectif est de prouver ma maîtrise des fondamentaux du web et de l'intégration pure.
-- **Phase 2 (À venir) : Tailwind CSS.** Refactorisation du style pour intégrer une approche "Utility-First" et optimiser le workflow.
+- **Phase 1 (Terminée) : 100% Vanilla.** Architecture HTML5 sémantique et CSS3 modulaire. L'objectif était de prouver ma maîtrise des fondamentaux du web et de l'intégration pure.
+- **Phase 2 (Statut actuel) : Tailwind CSS.** Migration complète de l'architecture CSS vers le framework Tailwind CSS. Refonte et amélioration globale du design (UI) via l'approche "Utility-First".
 - **Phase 3 (À venir) : JavaScript Vanilla.** Ajout d'interactions dynamiques et de logique front-end.
 - **Phase 4 (À venir) : React.** Migration du projet vers une architecture complète basée sur des composants React.
 
-## Statut actuel du déploiement (Phase 1)
+## Statut actuel du déploiement (Phase 2)
 
 Le déploiement se fait étape par étape de manière artisanale :
 
 - [Terminé] Architecture globale et fondations CSS.
 - [Terminé] Page d'accueil et message d'introduction.
 - [Terminé] Intégration complète du [Curriculum Vitae](https://calogerovolpe.github.io/portfolio/html/cv.html) interactif.
+- [Terminé] Page de contact avec formulaire fonctionnel (sécurisé via Web3Forms) et protection anti-spam des numéros de téléphone (script d'obfuscation JS).
 - [En cours] Intégration des études de cas (Exemple en ligne : Projet "L'îlot Câlins").
+- [En cours] Section Projets Web (mise en place d'une page temporaire "En développement").
 - [À venir] Galeries complètes des projets Web et Graphiques.
 
 Lien vers la version en ligne : https://calogerovolpe.github.io/portfolio/index.html
 
-## Détails de l'architecture actuelle (CSS Modulaire)
+## Détails de l'architecture actuelle (Tailwind CSS)
 
-Pour cette première phase en Vanilla, le style repose sur une structure découpée et maintenable, réunie via des imports :
+Le projet a été entièrement refactorisé en utilisant le framework Tailwind CSS. Le design a été grandement amélioré (meilleure UI) et l'architecture s'appuie désormais sur une configuration sur-mesure :
 
-- Utilisation intensive de Flexbox et CSS Grid (`grid-template-columns`, `grid-template-rows`).
-- Définition d'un thème via des variables CSS natives (`--color-primary`, etc.).
-- Fichiers utilitaires séparés (espacements, alignements, typographie) pour un code DRY (Don't Repeat Yourself).
-- Conception entièrement Responsive via Media Queries.
+- **Approche "Utility-First" :** Construction des interfaces graphiques plus rapidement grâce aux classes utilitaires intégrées directement dans le HTML.
+- **Configuration personnalisée :** Création de classes de couleurs sur-mesure (`primary`, `secondary`) configurées pour respecter parfaitement la charte graphique.
+- **Polices locales :** Les typographies (fonts) ont été ajoutées et hébergées localement (pour optimiser le temps de chargement et respecter la vie privée de l'utilisateur), puis intégrées dans la configuration du framework.
+- **Responsive Design :** Conception entièrement responsive pilotée par les préfixes natifs de Tailwind (`md:`, `lg:`).
 
 ## Contact
 
-- Email : bx.volpe@gmail.com
+- Formulaire de contact : [Me contacter](https://calogerovolpe.github.io/portfolio/src/html/contact)
 - GitHub : @calogerovolpe
 
 ---
