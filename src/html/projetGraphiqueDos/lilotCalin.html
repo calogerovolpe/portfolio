@@ -1,304 +1,733 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr" class="scroll-smooth">
   <head>
-    <link rel="stylesheet" href="../../css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/output.css" />
     <title>Calogero Volpe - L'îlot Câlins</title>
   </head>
   <body
-    class="bg-calibre"
-    style="
-      background-image: url(../../src/assets/images/lilotCalins/arrierefond.webp);
-    "
+    class="bg-gray-950 bg-[url('../../assets/images/lilotCalins/arrierefond.webp')] bg-cover bg-fixed bg-center bg-blend-multiply bg-gray-900/95"
   >
-    <!-- =============================
-1. *** Header ***
-=============================   -->
+    <header
+      class="engagez-moi-je-suis-un-tres-bon-element-promis mt-10 mb-16 mx-8"
+    >
+      <!-- Conteneur flex pour gérer le titre et le bouton hamburger -->
+      <div
+        class="flex flex-row items-center justify-between text-white md:flex-col md:justify-center"
+      >
+        <a
+          href="../../../index.html"
+          class="text-2xl transition-colors hover:text-red-300"
+          >@calogerovolpe</a
+        >
 
-    <header>
-      <nav class="menu flex-center">
-        <a href="../../index.html">
-          <div class="logo">
-            <img
-              src="../../src/assets/images/logo.png"
-              alt="Logo de l'entreprise"
-            />
-          </div>
-        </a>
+        <!-- Bouton Menu Hamburger -->
+        <button
+          id="menu-btn"
+          class="block focus:outline-none md:hidden"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu de navigation -->
+      <nav
+        id="menu"
+        class="hidden mt-4 text-[12px] text-white transition-all duration-300 md:block"
+      >
+        <ul
+          class="flex flex-col items-center justify-center gap-5 mt-6 md:flex-row md:mt-0"
+        >
+          <li
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+          >
+            <span
+              class="py-2 px-4 w-full text-center bg-gray-700 rounded-full md:py-1 md:px-2 md:w-auto"
+              >Mes réalisations</span
+            >
+            <a
+              href="../projetsGraphique.html"
+              class="block py-2 px-4 w-full text-center bg-gray-600 rounded-full transition-colors cursor-pointer hover:bg-gray-500 md:py-1 md:px-2 md:w-auto"
+              >Graphique</a
+            >
+            <a
+              href="../projetsWeb.html"
+              class="block py-2 px-4 w-full text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2 md:w-auto"
+              >Web</a
+            >
+          </li>
+          <li
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+          >
+            <a
+              href="../cv.html"
+              class="block py-3 px-4 text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2"
+              >Curriculum Vitae</a
+            >
+            <a
+              href="../contact"
+              class="block py-3 px-4 text-center bg-red-400 rounded-full transition-colors cursor-pointer hover:bg-red-500 md:py-1 md:px-2"
+              >@Contact</a
+            >
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <!-- =============================
-2. *** Main ***
-=============================   -->
-
-    <main>
-      <div class="retour flex-center">
-        <a href="../projetsGraphique.html">Retour</a>
+    <main
+      class="flex flex-col gap-8 m-3 mb-20 md:mx-10 lg:mx-40 max-w-5xl lg:mx-auto"
+    >
+      <!-- En-tête de la page -->
+      <div
+        class="flex flex-col items-center justify-between gap-4 p-6 bg-gray-800 md:flex-row rounded-4xl"
+      >
+        <h2 class="text-2xl text-white md:text-3xl">Étude de cas</h2>
+        <a
+          href="../projetsGraphique.html"
+          class="px-5 py-2 text-white transition-colors bg-gray-700 rounded-full hover:bg-red-400"
+        >
+          &larr; Retour aux projets
+        </a>
       </div>
 
-      <div class="section__column">
-        <!-- -------------------------------------- -->
-        <!-- Première section : présentation global -->
-        <!-- -------------------------------------- -->
+      <!-- 1. Présentation globale -->
+      <section
+        class="flex flex-col items-center gap-8 p-8 bg-gray-800 rounded-4xl md:flex-row shadow-xl"
+      >
+        <!-- Logo du projet -->
+        <div
+          class="flex items-center justify-center w-48 h-48 p-6 bg-white rounded-full shadow-inner shrink-0"
+        >
+          <img
+            class="object-contain w-full h-full"
+            src="../../assets/images/lilotCalinsLogo.png"
+            alt="Logo L'îlot câlins"
+          />
+        </div>
 
-        <div class="card__content__column flex-column">
-          <div>
+        <div class="flex flex-col gap-4 text-center md:text-left">
+          <h1 class="text-3xl text-white md:text-5xl">L'îlot câlins</h1>
+          <p class="text-gray-300 text-justify">
+            L'îlot câlins est une association à but non lucratif dédiée à
+            l'hospitalisation des enfants en état de critiques graves dans les
+            pays en développement. Un projet difficile ou la charte graphique
+            doit sensibiliser et passer un message fort.
+          </p>
+          <div
+            class="flex flex-wrap justify-center gap-2 mt-2 md:justify-start"
+          >
+            <span
+              class="px-3 py-1 text-xs font-medium text-red-300 bg-red-400/10 border border-red-400/20 rounded-full"
+              >Non terminé</span
+            >
+            <span
+              class="px-3 py-1 text-xs text-gray-300 bg-gray-700 border border-gray-600 rounded-full"
+              >ID visuelle</span
+            >
+            <span
+              class="px-3 py-1 text-xs text-gray-300 bg-gray-700 border border-gray-600 rounded-full"
+              >Site Web</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Au commencement -->
+      <section
+        class="flex flex-col gap-6 p-8 bg-gray-800 rounded-4xl shadow-xl"
+      >
+        <h2 class="text-2xl text-center text-white md:text-3xl">
+          Au commencement
+        </h2>
+        <div class="space-y-4 text-gray-300 text-justify md:px-10">
+          <p>
+            Une demande particulière : concevoir une identité visuelle pour des
+            enfants atteints de pathologies graves. Comment aborder un tel
+            projet ?
+          </p>
+          <p>
+            Face à ce sujet hautement sensible, ma priorité a été de me placer à
+            hauteur d'enfant. L'identité visuelle n'a donc pas été pensée
+            exclusivement pour convaincre les adultes (parents, donateurs), mais
+            avant tout pour instaurer un environnement accueillant et rassurant
+            pour les jeunes patients.
+          </p>
+          <ul
+            class="flex flex-col gap-3 pl-4 mt-4 list-disc list-inside marker:text-red-400"
+          >
+            <li>
+              <strong class="text-white">Premier défi :</strong> donner une
+              dimension graphique au nom de l'association, "L'îlot Câlins".
+            </li>
+            <li>
+              <strong class="text-white">Deuxième défi :</strong> trouver des
+              formes et des couleurs qui reflètent la douceur, la bienveillance
+              et le soin.
+            </li>
+            <li>
+              <strong class="text-white">Troisième défi :</strong> construire un
+              storytelling puissant, digne et engageant.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. La création du logo -->
+      <section
+        class="flex flex-col gap-8 p-8 bg-gray-800 rounded-4xl shadow-xl"
+      >
+        <h2 class="mb-4 text-2xl text-center text-white md:text-3xl">
+          La création du logo
+        </h2>
+
+        <!-- Étape 1 -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-8 bg-gray-900/50 p-6 rounded-3xl"
+        >
+          <div class="flex flex-col flex-1 gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex items-center justify-center w-10 h-10 text-lg font-bold text-gray-900 bg-red-400 rounded-full shrink-0"
+                >1</span
+              >
+              <h3 class="text-xl text-white font-semibold">L'idée de base</h3>
+            </div>
+            <p class="text-gray-300 text-justify">
+              Dès les premières minutes de réflexion, une image claire m'était
+              apparue. Il me fallait absolument des câlins dans mon logo. La
+              première version était la plus simple : une île en forme de
+              câlins.
+            </p>
+          </div>
+          <div class="flex justify-center flex-1">
             <img
-              class="card__logo"
-              src="../../src/assets/images/lilotCalinsLogo.png"
-              alt="Association à but non lucratif dédiée à l'hospitalisation des enfants dans les pays "
+              src="../../assets/images/lilotCalins/version1.png"
+              alt="Croquis île câlin"
+              class="max-w-xs transition-transform duration-300 bg-white rounded-2xl hover:scale-105"
             />
           </div>
-          <div class="card__content flex-center">
-            <h1>L'îlot câlins</h1>
-            <p>
-              L'îlot câlins est une association à but non lucratif dédiée à
-              l'hospitalisation des enfants en état de critiques graves dans les
-              pays en développement. Un projet difficile ou la charte graphique
-              doit sensibiliser et passer un message fort.
-            </p>
-          </div>
         </div>
 
-        <div class="tagscard__content__column">
-          <p class="tags-fort">Non terminé</p>
-          <p class="tags-fort">ID visuelle</p>
-          <p class="tags-fort">Site Web</p>
-        </div>
-
-        <!-- ------------------------------------------ -->
-        <!-- Deuxième section : la demande particulière -->
-        <!-- ------------------------------------------ -->
-
-        <div class="card__text">
-          <div class="margin-top50">
-            <h2 class="flex-center margin-bottom50">Au commencement</h2>
-            <p>
-              Une demande particulière : concevoir une identité visuelle pour
-              des enfants atteints de pathologies graves. Comment aborder un tel
-              projet ?
-            </p>
-            <p>
-              Face à ce sujet hautement sensible, ma priorité a été de me placer
-              à hauteur d'enfant. L'identité visuelle n'a donc pas été pensée
-              exclusivement pour convaincre les adultes (parents, donateurs),
-              mais avant tout pour instaurer un environnement accueillant et
-              rassurant pour les jeunes patients.
-            </p>
-            <p>
-              <strong>Premier défi :</strong> donner une dimension graphique au
-              nom de l'association, "L'îlot Câlins".
-            </p>
-            <p>
-              <strong>Deuxième défi :</strong> trouver des formes et des
-              couleurs qui reflètent la douceur, la bienveillance et le soin.
-            </p>
-            <p>
-              <strong>Troisième défi :</strong> construire un storytelling
-              puissant, digne et engageant.
-            </p>
-          </div>
-        </div>
-
-        <!-- ---------------------------------------- -->
-        <!-- Troisième section : La création du logo  -->
-        <!-- ---------------------------------------- -->
-
+        <!-- Étape 2 -->
         <div
-          class="section__column--presentation margin-top50 section__color--primary"
+          class="flex flex-col md:flex-row-reverse items-center gap-8 bg-gray-900/50 p-6 rounded-3xl"
         >
-          <h2 class="flex-center margin-bottom50">Le logo</h2>
-
-          <!-- 1er cadre logo -->
-
-          <div class="card__content--presentation flex-center margin-top50">
-            <div class="card__content">
-              <p>
-                Dès les premières minutes de réflexion, une image claire m'était
-                apparue. Il me fallait absolument des câlins dans mon logo.
-              </p>
-              <p>
-                La première version était la plus simple : une île en forme de
-                câlins.
-              </p>
-              <p
-                class="card__bouton card__bouton__right card__bouton__correction--top"
+          <div class="flex flex-col flex-1 gap-4">
+            <div class="flex items-center gap-4 flex-row-reverse md:flex-row">
+              <span
+                class="flex items-center justify-center w-10 h-10 text-lg font-bold text-gray-900 bg-red-400 rounded-full shrink-0"
+                >2</span
               >
-                1
-              </p>
-            </div>
-            <div class="card__image flex-center">
-              <img
-                src="../../src/assets/images/lilotCalins/version1.png"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <!-- 2eme cadre logo -->
-
-          <div class="card__content--presentation flex-center margin-top50">
-            <div class="card__image flex-center">
-              <img
-                src="../../src/assets/images/lilotCalins/version2.png"
-                alt=""
-              />
-            </div>
-            <div class="card__content">
-              <p>
-                Au lieu de créer une île complète, pourquoi ne pas concevoir les
-                mains d’une créature étrange et mignonne...
-              </p>
-              <p>
-                C'est à ce moment-là qu'une idée d’accroche narrative est née :
-                une île où des Câlins (créature exotique) vivent et soignent les
-                enfants avec leurs câlins magiques.
-              </p>
-              <p
-                class="card__bouton card__bouton__left card__bouton__correction--top"
+              <h3
+                class="text-xl text-white font-semibold text-right md:text-left"
               >
-                2
-              </p>
+                L'accroche narrative
+              </h3>
             </div>
+            <p class="text-gray-300 text-justify">
+              Au lieu de créer une île complète, pourquoi ne pas concevoir les
+              mains d’une créature étrange et mignonne... C'est à ce moment-là
+              qu'une idée d’accroche narrative est née : une île où des Câlins
+              (créature exotique) vivent et soignent les enfants avec leurs
+              câlins magiques.
+            </p>
           </div>
-
-          <!-- 3eme cadre logo -->
-
-          <div class="card__content--presentation flex-center">
-            <div class="card__content">
-              <p>
-                Le style se renforce et l'écriture du logo est faite à la main
-                pour le rendre unique.
-              </p>
-              <p>
-                Ce prototype montre l’idée de prendre les enfants dans ses bras.
-                Cependant... Une chose manque.
-              </p>
-              <p
-                class="card__bouton card__bouton__right card__bouton__correction--top"
-              >
-                3
-              </p>
-            </div>
-            <div class="card__image flex-center">
-              <img
-                src="../../src/assets/images/lilotCalins/version3.png"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <!-- 4eme cadre logo -->
-
-          <div class="card__content--presentation flex-center">
-            <div class="card__content">
-              <h3 class="flex-center bouton__deco">Version final</h3>
-              <p>
-                Enfin ! Le logo est abouti et reprend tous les besoins visuels.
-                Le choix de rendre le logo négatif (que le dessin et l'écriture
-                soit vides) permet de rendre le visuel plus unifié et reposant
-                pour les yeux.
-              </p>
-              <p>
-                La forme ronde facilite l'adaptation du logo dans tous les
-                supports graphiques.
-              </p>
-              <p>
-                Les proportions, ainsi que toutes les règles d'application du
-                logo sont définies dans la charte graphique.
-              </p>
-            </div>
-            <div class="flex-center">
-              <img
-                src="../../src/assets/images/lilotCalins/logopropo.png"
-                alt=""
-              />
-            </div>
+          <div class="flex justify-center flex-1">
+            <img
+              src="../../assets/images/lilotCalins/version2.png"
+              alt="Croquis mains de créature"
+              class="max-w-xs transition-transform duration-300 rounded-2xl hover:scale-105"
+            />
           </div>
         </div>
-        <!-- fin de la section logo -->
 
-        <!-- ------------------------------------------------ -->
-        <!-- Quatrième section : la création de la mascotte   -->
-        <!-- ------------------------------------------------ -->
-
+        <!-- Étape 3 -->
         <div
-          class="section__column--presentation margin-top50 section__color--primary"
+          class="flex flex-col md:flex-row items-center gap-8 bg-gray-900/50 p-6 rounded-3xl"
         >
-          <h2 class="flex-center margin-bottom50">Les Câlins</h2>
-
-          <!-- 1er Cadre mascotte -->
-
-          <div class="card__content--presentation flex-center margin-top50">
-            <div class="card__content">
-              <p>
-                Au début, je suis partie sur une créature au long bras, avec le
-                pouvoir de savoir les étirer pour câliner, même au loin.
-              </p>
-              <p>
-                La forme simple plaisait au client, mais je trouvais qu'il
-                manquait encore de force.
-              </p>
+          <div class="flex flex-col flex-1 gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex items-center justify-center w-10 h-10 text-lg font-bold text-gray-900 bg-red-400 rounded-full shrink-0"
+                >3</span
+              >
+              <h3 class="text-xl text-white font-semibold">
+                Le style typographique
+              </h3>
             </div>
-            <div class="flex-center">
-              <img
-                class="card__image"
-                src="../../src/assets/images/lilotCalins/mascottev1.png"
-                alt=""
-              />
-            </div>
+            <p class="text-gray-300 text-justify">
+              Le style se renforce et l'écriture du logo est faite à la main
+              pour le rendre unique. Ce prototype montre l’idée de prendre les
+              enfants dans ses bras. Cependant... Une chose manque.
+            </p>
           </div>
-
-          <!-- 2eme Cadre mascotte -->
-
-          <div class="card__content--presentation flex-center margin-top50">
-            <div class="flex-center">
-              <img
-                style="background-color: var(--color-hover); padding: 20px"
-                class="card__image"
-                src="../../src/assets/images/lilotCalins/mascotteblanc.png"
-                alt=""
-              />
-            </div>
-            <div class="card__content">
-              <p>
-                Le problème majeur, c'était l'introduction de la mascotte dans
-                les supports graphiques coloré, et son côté mignion qui ne
-                ressortait pas encore assez.
-              </p>
-              <p>
-                J'ai donc opté pour une couleur supplémentaire : le blanc. Cette
-                couleur permettait d'introduire les Câlins n'importe où sans que
-                cela soit visuellement désharmonisé. J'ai également agrandit
-                leurs yeux.
-              </p>
-            </div>
-          </div>
-
-          <!-- 3eme Cadre mascotte -->
-
-          <div class="card__content--presentation flex-center margin-top50">
-            <div class="card__content">
-              <p>
-                Pour ne pas toujours le mettre entiers, j'ai créer une manière
-                de l'introduire qui permettait à la fois le rendre présent dans
-                les autres supports sans être trop lourd, et d'accentuer le
-                caractères curieux de la créature.
-              </p>
-            </div>
-            <div class="card__image flex-center">
-              <img
-                class="card__image"
-                src="../../src/assets/images/lilotCalins/tetemascotte.webp"
-                alt=""
-              />
-            </div>
+          <div class="flex justify-center flex-1">
+            <img
+              src="../../assets/images/lilotCalins/version3.png"
+              alt="Logo typographique en cours"
+              class="max-w-xs transition-transform duration-300 bg-white p-4 rounded-2xl hover:scale-105"
+            />
           </div>
         </div>
-      </div>
-      <!-- fin -->
+
+        <!-- Étape finale -->
+        <div
+          class="flex flex-col items-center gap-8 pt-8 mt-4 border-t border-gray-700"
+        >
+          <div class="flex flex-col items-center text-center gap-4 max-w-2xl">
+            <h3
+              class="text-2xl font-bold text-red-300 uppercase tracking-widest"
+            >
+              Version finale
+            </h3>
+            <p class="text-gray-300 text-justify md:text-center">
+              Enfin ! Le logo est abouti et reprend tous les besoins visuels. Le
+              choix de rendre le logo négatif (que le dessin et l'écriture soit
+              vides) permet de rendre le visuel plus unifié et reposant pour les
+              yeux. La forme ronde facilite l'adaptation du logo dans tous les
+              supports graphiques. Les proportions, ainsi que toutes les règles
+              d'application du logo sont définies dans la charte graphique.
+            </p>
+          </div>
+          <img
+            src="../../assets/images/lilotCalins/logopropo.png"
+            alt="Logo final L'îlot Câlins"
+            class="w-full max-w-md transition-transform duration-300 hover:scale-[1.02]"
+          />
+        </div>
+      </section>
+
+      <!-- 4. La création de la mascotte -->
+      <section
+        class="flex flex-col gap-8 p-8 bg-gray-800 rounded-4xl shadow-xl"
+      >
+        <h2 class="mb-4 text-2xl text-center text-white md:text-3xl">
+          La mascotte : Les Câlins
+        </h2>
+
+        <!-- Étape 1 Mascotte -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-8 bg-gray-900/50 p-6 rounded-3xl"
+        >
+          <div class="flex flex-col flex-1 gap-4">
+            <p class="text-gray-300 text-justify">
+              Au début, je suis partie sur une créature au long bras, avec le
+              pouvoir de savoir les étirer pour câliner, même au loin. La forme
+              simple plaisait au client, mais je trouvais qu'il manquait encore
+              de force.
+            </p>
+          </div>
+          <div class="flex justify-center flex-1">
+            <img
+              src="../../assets/images/lilotCalins/mascottev1.png"
+              alt="Brouillon mascotte version 1"
+              class="max-w-[200px] transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <!-- Étape 2 Mascotte -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center gap-8 bg-gray-900/50 p-6 rounded-3xl"
+        >
+          <div class="flex flex-col flex-1 gap-4">
+            <p class="text-gray-300 text-justify">
+              Le problème majeur, c'était l'introduction de la mascotte dans les
+              supports graphiques coloré, et son côté mignion qui ne ressortait
+              pas encore assez. J'ai donc opté pour une couleur supplémentaire :
+              le blanc. Cette couleur permettait d'introduire les Câlins
+              n'importe où sans que cela soit visuellement désharmonisé. J'ai
+              également agrandit leurs yeux.
+            </p>
+          </div>
+          <div class="flex justify-center flex-1">
+            <img
+              src="../../assets/images/lilotCalins/mascotteblanc.png"
+              alt="Mascotte version blanche"
+              class="max-w-[200px] bg-gray-700 p-6 rounded-3xl transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <!-- Étape 3 Mascotte -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-8 bg-gray-900/50 p-6 rounded-3xl"
+        >
+          <div class="flex flex-col flex-1 gap-4">
+            <p class="text-gray-300 text-justify">
+              Pour ne pas toujours le mettre entiers, j'ai créer une manière de
+              l'introduire qui permettait à la fois le rendre présent dans les
+              autres supports sans être trop lourd, et d'accentuer le caractères
+              curieux de la créature.
+            </p>
+          </div>
+          <div class="flex justify-center flex-1">
+            <img
+              src="../../assets/images/lilotCalins/tetemascotte.webp"
+              alt="Tête de la mascotte"
+              class="max-w-[200px] transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Galerie d'images -->
+      <section
+        class="flex flex-col gap-6 p-8 bg-gray-800 rounded-4xl shadow-xl"
+      >
+        <h2 class="text-2xl text-center text-white md:text-3xl">
+          Galerie du projet
+        </h2>
+
+        <!-- Grille de la galerie -->
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+          <!-- Item 1 -->
+          <div
+            class="relative overflow-hidden cursor-pointer rounded-2xl group aspect-square gallery-item shadow-lg"
+          >
+            <div
+              class="absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-gray-900/50 group-hover:opacity-100"
+            >
+              <svg
+                class="w-10 h-10 text-white drop-shadow-md"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                ></path>
+              </svg>
+            </div>
+            <img
+              src="../../assets/images/lilotCalins/carrousecalinange.webp"
+              alt="Aperçu du projet"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            class="relative overflow-hidden cursor-pointer rounded-2xl group aspect-square gallery-item shadow-lg"
+          >
+            <div
+              class="absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-gray-900/50 group-hover:opacity-100"
+            >
+              <svg
+                class="w-10 h-10 text-white drop-shadow-md"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                ></path>
+              </svg>
+            </div>
+            <img
+              src="../../assets/images/lilotCalins/carrouseheroweb.webp"
+              alt="Aperçu du projet"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            class="relative overflow-hidden cursor-pointer rounded-2xl group aspect-square gallery-item shadow-lg"
+          >
+            <div
+              class="absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-gray-900/50 group-hover:opacity-100"
+            >
+              <svg
+                class="w-10 h-10 text-white drop-shadow-md"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                ></path>
+              </svg>
+            </div>
+            <img
+              src="../../assets/images/lilotCalins/carrousel404.webp"
+              alt="Aperçu du projet"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+
+          <!-- Item 4 -->
+          <div
+            class="relative overflow-hidden cursor-pointer rounded-2xl group aspect-square gallery-item shadow-lg"
+          >
+            <div
+              class="absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-gray-900/50 group-hover:opacity-100"
+            >
+              <svg
+                class="w-10 h-10 text-white drop-shadow-md"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                ></path>
+              </svg>
+            </div>
+            <img
+              src="../../assets/images/lilotCalins/carrousemockup1.png"
+              alt="Aperçu du projet"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+
+          <!-- Item 5 -->
+          <div
+            class="relative overflow-hidden cursor-pointer rounded-2xl group aspect-square gallery-item shadow-lg"
+          >
+            <div
+              class="absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-gray-900/50 group-hover:opacity-100"
+            >
+              <svg
+                class="w-10 h-10 text-white drop-shadow-md"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                ></path>
+              </svg>
+            </div>
+            <img
+              src="../../assets/images/lilotCalins/carrouseMondeMap.webp"
+              alt="Aperçu du projet"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+
+          <!-- Item 6 -->
+          <div
+            class="relative overflow-hidden cursor-pointer rounded-2xl group aspect-square gallery-item shadow-lg"
+          >
+            <div
+              class="absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-gray-900/50 group-hover:opacity-100"
+            >
+              <svg
+                class="w-10 h-10 text-white drop-shadow-md"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                ></path>
+              </svg>
+            </div>
+            <img
+              src="../../assets/images/lilotCalins/carrousesupercalins.webp"
+              alt="Aperçu du projet"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+        </div>
+
+        <p class="text-xs text-center text-gray-500 mt-2">
+          Cliquez sur une image pour l'agrandir
+        </p>
+      </section>
     </main>
+
+    <footer
+      class="flex flex-col items-center justify-center m-8 mt-20 mb-10 text-[12px] text-white"
+    >
+      <nav>
+        <ul
+          class="flex flex-col items-center justify-center gap-3 p-4 w-full max-w-sm bg-gray-800 rounded-3xl md:flex-row md:gap-1 md:p-1.5 md:w-auto md:max-w-none md:rounded-full"
+        >
+          <!-- Logo -->
+          <li
+            class="w-full pb-2 mb-1 text-center border-b border-gray-700 md:w-auto md:pb-0 md:mb-0 md:border-none md:pr-3"
+          >
+            <a
+              href="../../../index.html"
+              class="text-lg transition-colors hover:text-red-300 md:px-2"
+              >@calogerovolpe</a
+            >
+          </li>
+
+          <!-- Liens -->
+          <li class="w-full md:w-auto">
+            <a
+              href="mailto:bx.volpe@gmail.com"
+              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              >Email</a
+            >
+          </li>
+          <li class="w-full md:w-auto">
+            <a
+              href="https://github.com/calogerovolpe"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              >GitHub</a
+            >
+          </li>
+
+          <!-- Séparateur Desktop -->
+          <li class="hidden px-1 text-gray-600 md:block">|</li>
+
+          <!-- Téléphones -->
+          <li class="w-full md:w-auto">
+            <a
+              href="tel:+33664540423"
+              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              >FR : +33 6 64 54 04 23</a
+            >
+          </li>
+          <li class="w-full md:w-auto">
+            <a
+              href="tel:+32494161997"
+              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
+              >BE : +32 494 16 19 97</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="flex flex-col items-center gap-4 mt-8 text-gray-500 md:flex-row"
+      >
+        <p>© 2026 Calogero Volpe. Tous droits réservés.</p>
+        <span class="hidden md:inline">•</span>
+        <a href="#" class="transition-colors hover:text-white"
+          >Retour en haut ↑</a
+        >
+      </div>
+    </footer>
+
+    <!-- Lightbox (Modale plein écran) -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 z-50 flex items-center justify-center hidden px-4 transition-opacity duration-300 opacity-0 bg-gray-950/95 backdrop-blur-sm"
+    >
+      <button
+        id="lightbox-close"
+        class="absolute p-2 text-white transition-colors top-6 right-6 hover:text-red-400 focus:outline-none"
+      >
+        <svg
+          class="w-10 h-10"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+      <img
+        id="lightbox-img"
+        src=""
+        alt="Image agrandie"
+        class="object-contain max-w-full max-h-[90vh] rounded-xl shadow-2xl transition-transform duration-300 scale-95"
+      />
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", !isExpanded);
+      });
+
+      // Logic de la Lightbox (Galerie interactive)
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxClose = document.getElementById("lightbox-close");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.remove("hidden");
+        // Petit délai pour permettre à la transition CSS de s'effectuer
+        setTimeout(() => {
+          lightbox.classList.remove("opacity-0");
+          lightboxImg.classList.remove("scale-95");
+          lightboxImg.classList.add("scale-100");
+        }, 10);
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add("opacity-0");
+        lightboxImg.classList.remove("scale-100");
+        lightboxImg.classList.add("scale-95");
+        setTimeout(() => {
+          lightbox.classList.add("hidden");
+          lightboxImg.src = "";
+        }, 300);
+      }
+
+      // Écouteurs d'événements
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          openLightbox(item.querySelector("img").src);
+        });
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !lightbox.classList.contains("hidden"))
+          closeLightbox();
+      });
+    </script>
   </body>
 </html>
