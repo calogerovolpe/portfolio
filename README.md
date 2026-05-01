@@ -22,7 +22,8 @@ Le déploiement se fait étape par étape de manière artisanale :
 - [Terminé] Architecture globale et fondations CSS.
 - [Terminé] Page d'accueil et message d'introduction.
 - [Terminé] Intégration complète du [Curriculum Vitae](https://calogerovolpe.github.io/portfolio/html/cv.html) interactif.
-- [Terminé] Page de contact avec formulaire fonctionnel (sécurisé via Web3Forms) et protection anti-spam des numéros de téléphone (script d'obfuscation JS).
+- [Terminé] Page de contact avec formulaire fonctionnel (sécurisé via Web3Forms). _Note : La structure initiale a été générée par l'IA pour gagner du temps, puis ajustée et affinée manuellement pour correspondre parfaitement à la charte graphique._
+- [Terminé] Protection anti-spam des numéros de téléphone via un script d'obfuscation JS expérimental, développé avec l'aide de l'IA.
 - [En cours] Intégration des études de cas (Exemple en ligne : Projet "L'îlot Câlins").
 - [En cours] Section Projets Web (mise en place d'une page temporaire "En développement").
 - [À venir] Galeries complètes des projets Web et Graphiques.
