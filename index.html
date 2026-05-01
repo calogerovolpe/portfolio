@@ -9,7 +9,9 @@
     <title>Calogero Volpe - Porfolio</title>
   </head>
   <body class="bg-black">
-    <header class="engagez-moi-je-suis-un-tres-bon-element-promis m-8">
+    <header
+      class="engagez-moi-je-suis-un-tres-bon-element-promis mt-10 mb-16 mx-8"
+    >
       <!-- Conteneur flex pour gérer le titre et le bouton hamburger -->
       <div
         class="flex flex-row items-center justify-between text-white md:flex-col md:justify-center"
@@ -86,98 +88,106 @@
     </header>
 
     <main
-      class="flex flex-col items-center lg:grid lg:grid-cols-4 lg:grid-rows-2 gap-4 md:gap-4"
+      class="flex flex-col items-center justify-center gap-4 m-3 md:mx-10 md:grid md:grid-cols-5 md:grid-rows-2 md:items-stretch lg:mx-40"
     >
       <!-- cadre de bienvenue -->
-      <section class="flex flex-col gap-0">
-        <div class="h-8">
-          <div class="w-2 h-2 roundend-full"></div>
-          <div class="w-2 h-2 roundend-full"></div>
-          <div class="w-2 h-2 roundend-full"></div>
-        </div>
-        <div
-          class="lg:col-start-1 lg:row-start-1 flex flex-col items-center justify-center gap-4 p-8 bg-gray-800 rounded-4xl m-3"
+      <section
+        class="flex flex-col items-center justify-center gap-4 p-8 bg-gray-800 rounded-4xl md:col-start-1 md:col-end-3 md:row-start-1"
+      >
+        <h2 class="text-2xl md:text-5xl text-white">
+          Bienvenue sur mon {portfolio} !
+        </h2>
+        <p class="text-white text-justify">
+          - Ce <span class="text-red-300">portfolio</span> a été entièrement
+          conçu sur mesure, sans l'aide d'un CMS. Il repose exclusivement sur
+          les langages fondamentaux du web : HTML5, CSS3 et JavaScript. J'ai
+          délibérément opté pour un design minimaliste afin de mettre en lumière
+          la propreté de mon code source et ma maîtrise de l'architecture de
+          base. Si je suis capable de bâtir des fondations robustes à partir de
+          zéro, imaginez ce que je pourrai accomplir avec des outils et
+          frameworks plus avancés. -
+        </p>
+        <a
+          href="#section__column"
+          class="px-3 py-1.5 text-white rounded-full transition-colors cursor-pointer hover:bg-red-400"
         >
-          <h2 class="text-2xl md:text-3xl text-white">
-            Bienvenue sur mon {portfolio} !
-          </h2>
-          <p class="text-white text-justify">
-            - Ce <span class="text-red-300">portfolio</span> a été entièrement
-            conçu sur mesure, sans l'aide d'un CMS. Il repose exclusivement sur
-            les langages fondamentaux du web : HTML5, CSS3 et JavaScript. J'ai
-            délibérément opté pour un design minimaliste afin de mettre en
-            lumière la propreté de mon code source et ma maîtrise de
-            l'architecture de base. Si je suis capable de bâtir des fondations
-            robustes à partir de zéro, imaginez ce que je pourrai accomplir avec
-            des outils et frameworks plus avancés. -
-          </p>
-          <div
-            class="text-white py-1.5 px-3 rounded-full hover:bg-red-400 cursor-pointer"
-          >
-            <a href="#section__column">En savoir plus</a>
-          </div>
-        </div>
+          En savoir plus
+        </a>
       </section>
       <!-- fin cadre de bienvenue -->
+
       <!-- Cadre projet graphiques -->
-      <div class="relative lg:grid-start">
-        <div class="">
-          <img
-            class=""
-            src="./src/assets/images/projetsGraphiques.jpg"
-            alt=""
-          />
-          <div class="">
-            <h2 id="projets-graphiques">Mes projets Graphiques</h2>
-            <p>
-              De la conception structurelle au design final, découvrez mes
-              réalisations visuelles. J'aborde la création avec une extrême
-              rigueur, où chaque proportion, chaque espace et chaque ligne
-              répondent à une intention précise.
-            </p>
-            <a class="" href="./html/projetsGraphique.html">+</a>
-          </div>
+      <section
+        class="flex flex-col bg-gray-50 rounded-4xl md:col-start-3 md:col-end-6 md:row-start-1 overflow-hidden md:flex-row md:justify-center"
+      >
+        <img
+          class="w-full object-cover md:w-1/3"
+          src="./src/assets/images/projetsGraphiques.jpg"
+          alt="mes projets graphiques"
+        />
+
+        <div
+          class="flex flex-col items-center justify-center gap-4 p-8 md:w-1/2"
+        >
+          <h2
+            id="projets-graphiques"
+            class="text-2xl text-center text-black md:text-5xl"
+          >
+            Mes projets Graphiques
+          </h2>
+          <p class="text-black text-justify">
+            De la conception structurelle au design final, découvrez mes
+            réalisations visuelles. J'aborde la création avec une extrême
+            rigueur, où chaque proportion, chaque espace et chaque ligne
+            répondent à une intention précise.
+          </p>
+          <a
+            class="px-5 py-2 text-white bg-gray-800 rounded-full transition-colors hover:bg-red-400"
+            href="./src/html/projetsGraphique.html"
+            >+</a
+          >
         </div>
-        <!-- Fin de cadre projet graphiques -->
-        <div class="card flex-center">
-          <div class="card__content">
-            <h2 id="projets-web" class="text__end">Mes projets Web</h2>
-            <p>
-              De l'assemblage CMS à l'artisanat du code. Découvrez mes premières
-              réalisations interactives sous WordPress, ainsi que ma transition
-              vers le développement sur mesure, illustrée par ce portfolio 100%
-              fait main en HTML, CSS et JS.
-            </p>
-            <a
-              class="card__bouton card__bouton__left"
-              href="./html/projetsWeb.html"
-              >+</a
-            >
-          </div>
-          <img
-            class="card__image"
-            src="./src/assets/images/projetsWeb.jpg"
-            alt="Image représentant les projets web"
-          />
+      </section>
+      <!-- Fin de cadre projet graphiques -->
+
+      <div class="card flex-center">
+        <div class="card__content">
+          <h2 id="projets-web" class="text__end">Mes projets Web</h2>
+          <p>
+            De l'assemblage CMS à l'artisanat du code. Découvrez mes premières
+            réalisations interactives sous WordPress, ainsi que ma transition
+            vers le développement sur mesure, illustrée par ce portfolio 100%
+            fait main en HTML, CSS et JS.
+          </p>
+          <a
+            class="card__bouton card__bouton__left"
+            href="./html/projetsWeb.html"
+            >+</a
+          >
         </div>
-        <div class="card flex-center">
-          <img
-            class="card__image"
-            src="./src/assets/images/ProjetsDessins.jpg"
-            alt="Image représentant les projets de dessin"
-          />
-          <div class="card__content">
-            <h2 id="curriculum-vitae">Mon Curriculum Vitae</h2>
-            <p>
-              Un parcours exigeant au service de la tech. Découvrez comment la
-              gestion du stress, la direction d'équipe et la rigueur technique
-              nourrissent aujourd'hui ma logique et ma méthode en tant que
-              développeur.
-            </p>
-            <a class="card__bouton card__bouton__right" href="./html/cv.html"
-              >+</a
-            >
-          </div>
+        <img
+          class="card__image"
+          src="./src/assets/images/projetsWeb.jpg"
+          alt="Image représentant les projets web"
+        />
+      </div>
+      <div class="card flex-center">
+        <img
+          class="card__image"
+          src="./src/assets/images/ProjetsDessins.jpg"
+          alt="Image représentant les projets de dessin"
+        />
+        <div class="card__content">
+          <h2 id="curriculum-vitae">Mon Curriculum Vitae</h2>
+          <p>
+            Un parcours exigeant au service de la tech. Découvrez comment la
+            gestion du stress, la direction d'équipe et la rigueur technique
+            nourrissent aujourd'hui ma logique et ma méthode en tant que
+            développeur.
+          </p>
+          <a class="card__bouton card__bouton__right" href="./html/cv.html"
+            >+</a
+          >
         </div>
       </div>
     </main>
