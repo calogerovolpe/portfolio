@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@theme {
+  --font-secondary: "MaSuperPolice", sans-serif;
+  --font-primary: "MonSuperTitre", sans-serif;
+}
+
+@font-face {
+  font-family: "MaSuperPolice";
+  src: url("../assets/fonts/SourceCodePro-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MonSuperTitre";
+  src: url("../assets/fonts/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-primary);
+    color: white;
+  }
+
+  p {
+    font-family: var(--font-secondary);
+    color: white;
+  }
+}

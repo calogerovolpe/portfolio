@@ -1,47 +1,133 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <!-- Hello les devs qui inspectent le code ! Je suis Calogero Volpe, un jeune développeur passionné par le code et la création de sites web. J'ai construit ce portfolio pour montrer mes compétences en HTML, CSS et JavaScript. N'hésitez pas à explorer le code source pour voir comment j'ai conçu chaque élément du site. Si vous avez des questions ou des suggestions, je serais ravi d'en discuter avec vous. Et surtout, si vous avez vues des erreurs, n'hésitez pas à me les signaler. Je suis une personne qui veut évoluer. Merci de votre visite ! -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- <link rel="stylesheet" href="./src/css/style.css" /> -->
+    <link rel="stylesheet" href="./src/css/output.css" />
     <title>Calogero Volpe - Porfolio</title>
   </head>
-  <body>
-    <header>
-      <nav
-        class="menu engagez-moi-je-suis-un-tres-bon-element-promis flex-center"
+  <body class="bg-black">
+    <header class="engagez-moi-je-suis-un-tres-bon-element-promis m-8">
+      <!-- Conteneur flex pour gérer le titre et le bouton hamburger -->
+      <div
+        class="flex flex-row items-center justify-between text-white md:flex-col md:justify-center"
       >
-        <div class="logo">
-          <img src="./src/assets/images/logo.png" alt="" />
-        </div>
+        <h1 class="text-2xl">@calogerovolpe</h1>
+
+        <!-- Bouton Menu Hamburger (visible uniquement sur mobile) -->
+        <button
+          id="menu-btn"
+          class="block focus:outline-none md:hidden"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu de navigation (caché sur mobile par défaut, visible sur md) -->
+      <nav
+        id="menu"
+        class="hidden mt-4 text-[12px] text-white transition-all duration-300 md:block"
+      >
+        <ul
+          class="flex flex-col items-center justify-center gap-5 mt-6 md:flex-row md:mt-0"
+        >
+          <!-- Remplacement du div (invalide dans un ul) par un li flex -->
+          <li
+            class="flex flex-col gap-3 p-3 w-full bg-gray-800 rounded-2xl md:flex-row md:gap-5 md:p-1.5 md:w-auto md:rounded-full"
+          >
+            <span
+              class="py-2 px-4 w-full text-center bg-gray-700 rounded-full md:py-1 md:px-2 md:w-auto"
+              >Mes réalisations</span
+            >
+            <a
+              href="./src/html/projetsGraphique.html"
+              class="block py-2 px-4 w-full text-center rounded-full transition-colors cursor-pointer hover:bg-gray-700 md:py-1 md:px-2 md:w-auto"
+              >Graphique</a
+            >
+            <a
+              href="./src/html/projetsWeb.html"
+              class="block py-2 px-4 w-full text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2 md:w-auto"
+              >Web</a
+            >
+          </li>
+          <li class="w-full md:w-auto">
+            <a
+              href="./src/html/cv.html"
+              class="block py-3 px-4 text-center rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:py-1 md:px-2"
+              >Curriculum Vitae</a
+            >
+          </li>
+          <li class="w-full md:w-auto">
+            <a
+              href="./src/html/contact"
+              class="block py-3 px-4 text-center bg-red-400 rounded-full transition-colors cursor-pointer hover:bg-red-500 md:py-1 md:px-2"
+              >@Contact</a
+            >
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <div class="hero flex-center">
-        <h1>Bienvenue sur mon portfolio !</h1>
-        <p>
-          Ce portfolio a été entièrement conçu sur mesure, sans l'aide d'un CMS.
-          Il repose exclusivement sur les langages fondamentaux du web : HTML5,
-          CSS3 et JavaScript. J'ai délibérément opté pour un design minimaliste
-          afin de mettre en lumière la propreté de mon code source et ma
-          maîtrise de l'architecture de base. Si je suis capable de bâtir des
-          fondations robustes à partir de zéro, imaginez ce que je pourrai
-          accomplir avec des outils et frameworks plus avancés.
-        </p>
-        <div class="boutonHero">
-          <a href="#section__column">En savoir plus</a>
+    <main
+      class="flex flex-col items-center lg:grid lg:grid-cols-4 lg:grid-rows-2 gap-4 md:gap-4"
+    >
+      <!-- cadre de bienvenue -->
+      <section class="flex flex-col gap-0">
+        <div class="h-8">
+          <div class="w-2 h-2 roundend-full"></div>
+          <div class="w-2 h-2 roundend-full"></div>
+          <div class="w-2 h-2 roundend-full"></div>
         </div>
-      </div>
-      <div class="section__column flex-center">
-        <div class="card flex-center">
+        <div
+          class="lg:col-start-1 lg:row-start-1 flex flex-col items-center justify-center gap-4 p-8 bg-gray-800 rounded-4xl m-3"
+        >
+          <h2 class="text-2xl md:text-3xl text-white">
+            Bienvenue sur mon {portfolio} !
+          </h2>
+          <p class="text-white text-justify">
+            - Ce <span class="text-red-300">portfolio</span> a été entièrement
+            conçu sur mesure, sans l'aide d'un CMS. Il repose exclusivement sur
+            les langages fondamentaux du web : HTML5, CSS3 et JavaScript. J'ai
+            délibérément opté pour un design minimaliste afin de mettre en
+            lumière la propreté de mon code source et ma maîtrise de
+            l'architecture de base. Si je suis capable de bâtir des fondations
+            robustes à partir de zéro, imaginez ce que je pourrai accomplir avec
+            des outils et frameworks plus avancés. -
+          </p>
+          <div
+            class="text-white py-1.5 px-3 rounded-full hover:bg-red-400 cursor-pointer"
+          >
+            <a href="#section__column">En savoir plus</a>
+          </div>
+        </div>
+      </section>
+      <!-- fin cadre de bienvenue -->
+      <!-- Cadre projet graphiques -->
+      <div class="relative lg:grid-start">
+        <div class="">
           <img
-            class="card__image"
+            class=""
             src="./src/assets/images/projetsGraphiques.jpg"
             alt=""
           />
-          <div class="card__content">
+          <div class="">
             <h2 id="projets-graphiques">Mes projets Graphiques</h2>
             <p>
               De la conception structurelle au design final, découvrez mes
@@ -49,13 +135,10 @@
               rigueur, où chaque proportion, chaque espace et chaque ligne
               répondent à une intention précise.
             </p>
-            <a
-              class="card__bouton card__bouton__right"
-              href="./html/projetsGraphique.html"
-              >+</a
-            >
+            <a class="" href="./html/projetsGraphique.html">+</a>
           </div>
         </div>
+        <!-- Fin de cadre projet graphiques -->
         <div class="card flex-center">
           <div class="card__content">
             <h2 id="projets-web" class="text__end">Mes projets Web</h2>
@@ -115,5 +198,17 @@
     console.log(
       "Je cherche actuellement une équipe où je pourrais apprendre et apporter ma logique. Mon code source est 100% fait main.",
     );
+
+    // Script pour activer le toggle du menu Hamburger
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+
+      // Accessibilité : indique si le menu est ouvert ou fermé aux lecteurs d'écran (très important en mobile-first)
+      const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuBtn.setAttribute("aria-expanded", !isExpanded);
+    });
   </script>
 </html>
