@@ -182,21 +182,6 @@
               >GitHub</a
             >
           </li>
-          <li class="hidden px-1 text-gray-600 md:block">|</li>
-          <li class="w-full md:w-auto">
-            <a
-              href="tel:+33664540423"
-              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
-              >FR : +33 6 64 54 04 23</a
-            >
-          </li>
-          <li class="w-full md:w-auto">
-            <a
-              href="tel:+32494161997"
-              class="block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
-              >BE : +32 494 16 19 97</a
-            >
-          </li>
         </ul>
       </nav>
       <div
@@ -217,89 +202,6 @@
         menu.classList.toggle("hidden");
         const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
         menuBtn.setAttribute("aria-expanded", !isExpanded);
-      });
-
-      const beNum = [
-        "+",
-        "3",
-        "2",
-        "4",
-        "9",
-        "4",
-        "1",
-        "6",
-        "1",
-        "9",
-        "9",
-        "7",
-      ].join("");
-      const beDisp = [
-        "+",
-        "3",
-        "2",
-        " ",
-        "4",
-        "9",
-        "4",
-        " ",
-        "1",
-        "6",
-        " ",
-        "1",
-        "9",
-        " ",
-        "9",
-        "7",
-      ].join("");
-      document.querySelectorAll(".protected-tel-be").forEach((link) => {
-        link.setAttribute("href", "te" + "l:" + beNum);
-        const textNode = link.querySelector(".tel-text");
-        if (textNode)
-          textNode.textContent = link.hasAttribute("data-prefix")
-            ? link.getAttribute("data-prefix") + beDisp
-            : beDisp;
-      });
-
-      const frNum = [
-        "+",
-        "3",
-        "3",
-        "6",
-        "6",
-        "4",
-        "5",
-        "4",
-        "0",
-        "4",
-        "2",
-        "3",
-      ].join("");
-      const frDisp = [
-        "+",
-        "3",
-        "3",
-        " ",
-        "6",
-        " ",
-        "6",
-        "4",
-        " ",
-        "5",
-        "4",
-        " ",
-        "0",
-        "4",
-        " ",
-        "2",
-        "3",
-      ].join("");
-      document.querySelectorAll(".protected-tel-fr").forEach((link) => {
-        link.setAttribute("href", "te" + "l:" + frNum);
-        const textNode = link.querySelector(".tel-text");
-        if (textNode)
-          textNode.textContent = link.hasAttribute("data-prefix")
-            ? link.getAttribute("data-prefix") + frDisp
-            : frDisp;
       });
     </script>
   </body>

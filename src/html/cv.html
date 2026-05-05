@@ -116,82 +116,62 @@
            LA FEUILLE A4 (Le CV)
       ============================= -->
       <div
-        class="bg-gray-800 border border-gray-700 rounded-4xl shadow-2xl p-8 md:p-12 print:bg-white print:border-none print:shadow-none print:rounded-none print:p-8 print:text-black w-full [font-family:var(--font-secondary)]"
+        class="bg-gray-800 border border-gray-700 rounded-4xl shadow-2xl p-8 md:p-12 print:bg-white print:border-none print:shadow-none print:rounded-none print:p-2 print:text-black w-full [font-family:var(--font-secondary)]"
       >
         <!-- En-tête du CV (Contact, Photo, Titre) -->
-        <div
-          class="flex flex-col md:flex-row print:flex-row justify-between items-stretch gap-8 print:gap-6 border-b border-gray-700 pb-8 print:pb-6 print:border-gray-300"
+        <section
+          class="flex flex-col md:flex-row print:flex-row justify-between items-stretch gap-8 print:gap-1 border-b border-gray-700 pb-8 print:pb-1 print:border-gray-300"
         >
-          <!-- Colonne de gauche : Contact -->
+          <!-- Colonne de gauche : Langues -->
           <div
-            class="flex flex-col justify-center gap-4 print:gap-2 text-gray-300 text-base print:text-xs print:text-black md:w-1/3 print:w-1/3 print:text-left"
+            class="flex flex-col justify-center gap-4 print:gap-1 text-gray-300 text-base print:text-xs print:text-black md:w-1/3 print:w-1/3 print:text-left"
           >
-            <a
-              id="cv-mail-link"
-              href="#"
-              class="flex items-center gap-2 hover:text-red-300 transition-colors"
+            <h2
+              class="text-xl print:text-lg text-white font-bold print:text-black md:text-left text-center"
             >
-              <img
-                src="../assets/images/enveloppe.png"
-                class="w-4 h-4 invert print:invert-0"
-              />
-              <span id="cv-mail-text">Chargement...</span>
-            </a>
-            <a
-              href="#"
-              class="protected-tel-be flex items-center gap-2 hover:text-red-300 transition-colors"
+              Langues
+            </h2>
+            <div
+              class="grid grid-cols-[auto_auto] justify-center md:justify-start gap-x-4 gap-y-2 print:gap-y-1 text-sm print:text-[12px] print:text-black"
             >
-              <img
-                src="../assets/images/tel2.png"
-                class="w-4 h-4 invert print:invert-0"
-              />
-              <span class="tel-text">Chargement...</span>
-            </a>
-            <a
-              href="#"
-              class="protected-tel-fr flex items-center gap-2 hover:text-red-300 transition-colors"
-            >
-              <img
-                src="../assets/images/tel1.png"
-                class="w-4 h-4 invert print:invert-0"
-              />
-              <span class="tel-text">Chargement...</span>
-            </a>
-            <a
-              href="https://github.com/calogerovolpe"
-              class="flex items-center gap-2 hover:text-red-300 transition-colors"
-            >
-              <img
-                src="../assets/images/github.png"
-                class="w-5 h-5 -ml-0.5 invert print:invert-0"
-              />
-              @calogerovolpe
-            </a>
+              <div>Français</div>
+              <div class="font-bold text-white print:text-black">Natif</div>
+              <div>Néerlandais</div>
+              <div class="font-bold text-red-400 print:text-black">B2</div>
+              <div>Anglais</div>
+              <div class="font-bold text-red-400 print:text-black">B1</div>
+              <div>Italien</div>
+              <div class="font-bold text-red-400 print:text-black">C1</div>
+            </div>
           </div>
 
           <!-- Colonne centrale : Photo -->
-          <div class="shrink-0 self-center">
+          <div class="shrink-0 self-center flex items-center justify-center">
             <img
               src="../assets/images/portrait.webp"
               alt="Calogero Volpe"
-              class="w-40 h-40 print:w-28 print:h-28 object-cover rounded-full border-4 border-gray-700 print:border-gray-200"
+              class="w-40 h-40 object-cover rounded-full border-4 border-gray-700 print:hidden"
+            />
+            <img
+              src="../assets/images/qrcode.png"
+              alt="QR Code"
+              class="absolute w-0 h-0 opacity-0 print:static print:w-24 print:h-24 print:opacity-100 object-contain"
             />
           </div>
 
           <!-- Colonne de droite : Titre -->
           <div
-            class="flex flex-col justify-center gap-3 print:gap-1 text-center md:text-right print:text-right text-gray-300 print:text-black md:w-1/3 print:w-1/3"
+            class="flex flex-col justify-center gap-3 print:gap-1 text-center md:text-right print:text-left text-gray-300 print:text-black md:w-1/3 print:w-1/3"
           >
             <h1
               class="text-3xl md:text-4xl print:text-2xl text-white font-bold print:text-black leading-tight"
             >
               Développeur<br />
-              <span class="text-red-400 print:text-gray-800">Front-End</span
-              ><br />
+              <span class="text-red-400 print:text-black">Front-End</span><br />
               UI Designer
             </h1>
             <p
-              class="flex items-center justify-center md:justify-end gap-2 mt-2"
+              class="flex items-center justify-center md:justify-end gap-2 mt-2 print:text-black"
             >
               <img
                 src="../assets/images/auto.png"
@@ -210,15 +190,25 @@
               />
               7620 Guignies, Brunehaut
             </a>
+            <a
+              href="https://github.com/calogerovolpe"
+              target="_blank"
+              class="flex items-center justify-center md:justify-end gap-2 hover:text-red-300 transition-colors"
+            >
+              <img
+                src="../assets/images/github.png"
+                class="w-4 h-4 invert print:invert-0 print:-ml-3"
+              />
+              @calogerovolpe
+            </a>
           </div>
-        </div>
+        </section>
 
-        <!-- Section centrale : Compétences et Langues -->
-        <div
-          class="grid grid-cols-2 md:grid-cols-[2fr_1fr] print:grid-cols-[2fr_1fr] gap-4 md:gap-8 print:gap-6 py-8 print:py-6 border-b border-gray-700 print:border-gray-300"
+        <!-- Section centrale : Compétences -->
+        <section
+          class="py-8 print:py-0 border-b border-gray-700 print:border-none"
         >
-          <!-- Compétences -->
-          <div class="flex flex-col gap-4 print:gap-4">
+          <div class="flex flex-col gap-4 print:gap-0">
             <h2
               class="text-2xl print:text-xl text-white font-bold print:text-black"
             >
@@ -241,10 +231,18 @@
                 class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
                 >Tailwind</span
               >
-              <!-- <span
+              <span
                 class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
                 >SASS</span
-              > -->
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >UI/UX</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >VS Code</span
+              >
               <!-- <span
                 class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
                 >JavaScript</span
@@ -259,6 +257,18 @@
               >
               <span
                 class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >Elementor</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >Divi</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
+                >GitHub</span
+              >
+              <span
+                class="px-3 py-1 print:px-2 print:py-0.5 text-base print:text-[11px] bg-gray-700 text-gray-300 rounded-full border border-gray-600 print:bg-gray-100 print:border-gray-300 print:text-black"
                 >Photoshop</span
               >
               <span
@@ -267,43 +277,20 @@
               >
             </div>
           </div>
-
-          <!-- Langues -->
-          <div class="flex flex-col gap-6 print:gap-4">
-            <h2
-              class="text-2xl print:text-xl text-white font-bold print:text-black"
-            >
-              Langues
-            </h2>
-            <div
-              class="grid grid-cols-[auto_auto] justify-start gap-x-4 md:gap-x-6 gap-y-3 print:gap-y-1 text-gray-300 text-base print:text-[13px] print:text-black bg-gray-700/40 border border-gray-600 rounded-2xl p-4 md:p-5 print:bg-transparent print:border-none print:p-0 self-start w-full"
-            >
-              <div>Français</div>
-              <div class="font-bold text-white print:text-black -ml-3 md:ml-0">
-                Natif
-              </div>
-              <div>Néerlandais</div>
-              <div class="font-bold text-red-400 print:text-gray-600">B2</div>
-              <div>Anglais</div>
-              <div class="font-bold text-red-400 print:text-gray-600">B1</div>
-              <div>Italien</div>
-              <div class="font-bold text-red-400 print:text-gray-600">C1</div>
-            </div>
-          </div>
-        </div>
+        </section>
 
         <!-- Section Expériences -->
-        <div
-          class="py-8 print:py-6 border-b border-gray-700 print:border-gray-300"
+        <section
+          class="py-8 print:py-0 border-b border-gray-700 print:border-none"
         >
           <h2
-            class="text-2xl print:text-xl text-white font-bold mb-6 print:mb-4 print:text-black"
+            class="text-2xl print:text-xl text-white font-bold mb-6 print:mb-0 print:text-black"
           >
             Expériences
           </h2>
 
           <div
-            class="flex flex-col gap-6 print:gap-4 text-base print:text-sm print:leading-relaxed text-gray-300 print:text-black"
+            class="flex flex-col gap-6 print:gap-1 text-base print:text-sm print:leading-snug text-gray-300 print:text-black"
           >
             <!-- Freelance -->
             <div>
@@ -311,11 +298,13 @@
                 class="text-lg print:text-base text-white print:text-black font-bold"
               >
                 Freelance à Paris
-                <span class="text-red-400 print:text-gray-600 font-normal ml-2"
+                <span class="text-red-400 print:text-black font-normal ml-2"
                   >2021 - 2026</span
                 >
               </h3>
-              <ul class="pl-5 mt-2 list-disc marker:text-red-400">
+              <ul
+                class="pl-5 mt-2 list-disc marker:text-red-400 print:marker:text-black"
+              >
                 <li>Création d'identités visuelles complètes</li>
                 <li>Conception de chartes graphiques sur mesure</li>
                 <li>Prototypage et maquettage UI/UX sous Figma</li>
@@ -334,11 +323,13 @@
                 class="text-lg print:text-base text-white print:text-black font-bold"
               >
                 Chargé commercial à Ville de Montreuil
-                <span class="text-red-400 print:text-gray-600 font-normal ml-2"
+                <span class="text-red-400 print:text-black font-normal ml-2"
                   >2019 - 2021</span
                 >
               </h3>
-              <ul class="pl-5 mt-2 list-disc marker:text-red-400">
+              <ul
+                class="pl-5 mt-2 list-disc marker:text-red-400 print:marker:text-black"
+              >
                 <li>Gestion de relation entre commerçants de la ville</li>
                 <li>Promouvoir la ville par des événements et marchés</li>
                 <li>Contrôle des réglementations locales</li>
@@ -351,72 +342,72 @@
                 class="text-lg print:text-base text-white print:text-black font-bold"
               >
                 Manager en HORECA
-                <span class="text-red-400 print:text-gray-600 font-normal ml-2"
+                <span class="text-red-400 print:text-black font-normal ml-2"
                   >2010 - 2019</span
                 >
               </h3>
-              <p class="mt-2 text-justify">
+              <p class="mt-2 text-justify print:text-black">
                 Carrière dans la cuisine traditionnelle et collective, évolution
                 de commis à responsable d’unité. Gestion de grandes équipes, de
                 la logistique et de la stratégie opérationnelle.
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- Section Formations -->
-        <div class="py-8 print:py-6">
+        <section class="py-8 print:py-0">
           <h2
-            class="text-2xl print:text-xl text-white font-bold mb-6 print:mb-4 print:text-black"
+            class="text-2xl print:text-xl text-white font-bold mb-6 print:mb-1 print:text-black"
           >
             Formations
           </h2>
 
           <div
-            class="flex flex-col gap-4 print:gap-3 text-base print:text-sm text-gray-300 print:text-black"
+            class="flex flex-col gap-4 print:gap-1 text-base print:text-sm text-gray-300 print:text-black"
           >
             <div
-              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-4 items-baseline"
+              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-2 items-baseline"
             >
-              <div class="text-red-400 font-bold print:text-gray-600">
+              <div class="text-red-400 font-bold print:text-black">
                 2024 - 2026<br />STUDI
               </div>
               <p
-                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0"
+                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0 print:text-black"
               >
                 Communication Web et Media | E-Learning
               </p>
             </div>
             <div
-              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-4 items-baseline"
+              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-2 items-baseline"
             >
-              <div class="text-red-400 font-bold print:text-gray-600">
+              <div class="text-red-400 font-bold print:text-black">
                 2015 - 2016<br />BRUXELLES
               </div>
               <p
-                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0"
+                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0 print:text-black"
               >
                 Faculté de philosophie à l’université de Saint Louis à Bruxelles
               </p>
             </div>
             <div
-              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-4 items-baseline"
+              class="grid grid-cols-[100px_1fr] md:grid-cols-[150px_1fr] gap-4 print:gap-2 items-baseline"
             >
-              <div class="text-red-400 font-bold print:text-gray-600">
+              <div class="text-red-400 font-bold print:text-black">
                 2007 - 2010<br />SAINT-LUC
               </div>
               <p
-                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0"
+                class="bg-gray-700/50 p-4 rounded-xl border border-gray-600 print:bg-transparent print:border-none print:p-0 print:text-black"
               >
                 Dessins techniques & créativité artistique - Bachelor
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- QR Code -->
-        <div
-          class="mt-6 print:mt-4 flex items-center justify-start gap-6 border-t border-gray-700 print:border-gray-300 pt-6 print:pt-4"
+        <section
+          class="mt-6 print:hidden flex items-center justify-start gap-6 border-t border-gray-700 pt-6"
         >
           <img
             src="../assets/images/qrcode.png"
@@ -431,7 +422,7 @@
               >pour voir mon portfolio en ligne</span
             >
           </p>
-        </div>
+        </section>
       </div>
     </main>
 
@@ -470,27 +461,6 @@
               >GitHub</a
             >
           </li>
-
-          <!-- Séparateur Desktop -->
-          <li class="hidden px-1 text-gray-600 md:block">|</li>
-
-          <!-- Téléphones -->
-          <li class="w-full md:w-auto">
-            <a
-              href="#"
-              data-prefix="FR : "
-              class="protected-tel-fr block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
-              ><span class="tel-text">Chargement...</span></a
-            >
-          </li>
-          <li class="w-full md:w-auto">
-            <a
-              href="#"
-              data-prefix="BE : "
-              class="protected-tel-be block w-full py-2 px-4 text-center bg-gray-700 rounded-full transition-colors cursor-pointer hover:bg-gray-600 md:w-auto md:bg-transparent md:py-1 md:px-2 md:hover:bg-gray-700"
-              ><span class="tel-text">Chargement...</span></a
-            >
-          </li>
         </ul>
       </nav>
       <div
@@ -511,102 +481,6 @@
         menu.classList.toggle("hidden");
         const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
         menuBtn.setAttribute("aria-expanded", !isExpanded);
-      });
-
-      // Protection anti-spam de l'adresse email
-      const mUser = ["b", "x", ".", "v", "o", "l", "p", "e"].join("");
-      const mDom = ["g", "m", "a", "i", "l", ".", "c", "o", "m"].join("");
-      const mailLink = document.getElementById("cv-mail-link");
-      const mailText = document.getElementById("cv-mail-text");
-
-      if (mailLink && mailText) {
-        const emailAddress = mUser + "@" + mDom;
-        mailLink.setAttribute("href", "mail" + "to:" + emailAddress);
-        mailText.textContent = emailAddress;
-      }
-
-      // Protection anti-spam des numéros de téléphone
-      const beNum = [
-        "+",
-        "3",
-        "2",
-        "4",
-        "9",
-        "4",
-        "1",
-        "6",
-        "1",
-        "9",
-        "9",
-        "7",
-      ].join("");
-      const beDisp = [
-        "+",
-        "3",
-        "2",
-        " ",
-        "4",
-        "9",
-        "4",
-        " ",
-        "1",
-        "6",
-        " ",
-        "1",
-        "9",
-        " ",
-        "9",
-        "7",
-      ].join("");
-      document.querySelectorAll(".protected-tel-be").forEach((link) => {
-        link.setAttribute("href", "te" + "l:" + beNum);
-        const textNode = link.querySelector(".tel-text");
-        if (textNode)
-          textNode.textContent = link.hasAttribute("data-prefix")
-            ? link.getAttribute("data-prefix") + beDisp
-            : beDisp;
-      });
-
-      const frNum = [
-        "+",
-        "3",
-        "3",
-        "6",
-        "6",
-        "4",
-        "5",
-        "4",
-        "0",
-        "4",
-        "2",
-        "3",
-      ].join("");
-      const frDisp = [
-        "+",
-        "3",
-        "3",
-        " ",
-        "6",
-        " ",
-        "6",
-        "4",
-        " ",
-        "5",
-        "4",
-        " ",
-        "0",
-        "4",
-        " ",
-        "2",
-        "3",
-      ].join("");
-      document.querySelectorAll(".protected-tel-fr").forEach((link) => {
-        link.setAttribute("href", "te" + "l:" + frNum);
-        const textNode = link.querySelector(".tel-text");
-        if (textNode)
-          textNode.textContent = link.hasAttribute("data-prefix")
-            ? link.getAttribute("data-prefix") + frDisp
-            : frDisp;
       });
     </script>
   </body>
